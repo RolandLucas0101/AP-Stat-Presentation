@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+requests
+matplotlib
+reportlab
+xlsxwriter
+scipy
+scikit-learn
