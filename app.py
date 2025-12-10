@@ -1,6 +1,7 @@
 import streamlit as st
 import base64
 from io import BytesIO
+from datetime import datetime
 
 # Page configuration
 st.set_page_config(
@@ -98,6 +99,17 @@ st.markdown("""
         border-radius: 8px;
         margin: 1rem 0;
         border: 1px solid #dee2e6;
+    }
+    
+    .print-btn {
+        background: #007bff;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: none;
+        margin: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -477,6 +489,400 @@ All content is fully editable once transferred to PowerPoint or Google Slides.""
     
     return instructions
 
+def create_flyer():
+    """Create a two-page flyer summary (front and back)"""
+    today = datetime.now().strftime("%B %d, %Y")
+    
+    flyer = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            @media print {{
+                @page {{
+                    size: letter;
+                    margin: 0.5in;
+                }}
+                body {{
+                    font-family: Arial, sans-serif;
+                    font-size: 11pt;
+                    line-height: 1.4;
+                }}
+                .page {{
+                    page-break-after: always;
+                    padding: 20px;
+                }}
+                .page-break {{
+                    page-break-before: always;
+                }}
+                h1 {{
+                    color: #667eea;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }}
+                h2 {{
+                    color: #764ba2;
+                    border-bottom: 2px solid #764ba2;
+                    padding-bottom: 5px;
+                }}
+                .highlight {{
+                    background-color: #fff3cd;
+                    padding: 2px 4px;
+                    border-radius: 3px;
+                }}
+                .section {{
+                    margin: 15px 0;
+                    padding: 10px;
+                    background: #f8f9fa;
+                    border-radius: 5px;
+                }}
+                .career-grid {{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                    margin: 15px 0;
+                }}
+                .career-item {{
+                    padding: 8px;
+                    background: white;
+                    border: 1px solid #dee2e6;
+                    border-radius: 4px;
+                }}
+                .stat-method {{
+                    background: #e7f3ff;
+                    padding: 5px;
+                    margin: 3px 0;
+                    border-left: 3px solid #667eea;
+                }}
+                .contact-info {{
+                    text-align: center;
+                    margin-top: 20px;
+                    font-size: 10pt;
+                }}
+            }}
+        </style>
+    </head>
+    <body>
+    
+    <!-- PAGE 1 (FRONT) -->
+    <div class="page">
+        <h1>📊 AP Statistics: Your Gateway to Career Success</h1>
+        <p style="text-align: center; font-weight: bold;">Why Juniors Should Take AP Stats Senior Year</p>
+        <p style="text-align: center; font-size: 10pt;">{today}</p>
+        
+        <div class="section">
+            <h2>🚀 Key Benefits of AP Statistics</h2>
+            <ul>
+                <li><strong>College Credit:</strong> Earn credits and save tuition money</li>
+                <li><strong>College Admissions:</strong> Stand out in competitive applications</li>
+                <li><strong>Career Preparation:</strong> Required for most STEM and business majors</li>
+                <li><strong>Real-World Skills:</strong> Data analysis, critical thinking, problem-solving</li>
+                <li><strong>Versatility:</strong> Applies to ANY career field</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 AP Statistics in Real Careers</h2>
+            <div class="career-grid">
+                <div class="career-item">
+                    <strong>🏥 NICU Nurse</strong><br>
+                    • Vital sign analysis<br>
+                    • Treatment effectiveness testing<br>
+                    • Infection control statistics
+                </div>
+                <div class="career-item">
+                    <strong>📈 Marketing Pro</strong><br>
+                    • A/B testing campaigns<br>
+                    • Customer segmentation<br>
+                    • ROI analysis
+                </div>
+                <div class="career-item">
+                    <strong>⚕️ Pediatric Surgeon</strong><br>
+                    • Surgical risk assessment<br>
+                    • Outcome prediction<br>
+                    • Clinical trial analysis
+                </div>
+                <div class="career-item">
+                    <strong>🔒 Cybersecurity</strong><br>
+                    • Anomaly detection<br>
+                    • Threat probability<br>
+                    • Risk modeling
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📚 AP Stats Methods You'll Learn</h2>
+            <div class="stat-method">Hypothesis Testing</div>
+            <div class="stat-method">Regression Analysis</div>
+            <div class="stat-method">Probability Distributions</div>
+            <div class="stat-method">Confidence Intervals</div>
+            <div class="stat-method">Sampling Methods</div>
+            <div class="stat-method">Experimental Design</div>
+        </div>
+        
+        <div class="contact-info">
+            <p><strong>Questions?</strong> Talk to your guidance counselor about registering for AP Statistics!</p>
+            <p>Visit: [Your School's AP Coordinator] | Email: [Contact Information]</p>
+        </div>
+    </div>
+    
+    <!-- PAGE 2 (BACK) -->
+    <div class="page page-break">
+        <h1>AP Statistics Career Connections</h1>
+        
+        <div class="section">
+            <h2>💡 More Career Examples</h2>
+            <div class="career-grid">
+                <div class="career-item">
+                    <strong>🧪 Cosmetic Scientist</strong><br>
+                    • Product testing stats<br>
+                    • Formulation optimization<br>
+                    • Consumer research
+                </div>
+                <div class="career-item">
+                    <strong>⚡ Electrical Engineer</strong><br>
+                    • Quality control<br>
+                    • Reliability testing<br>
+                    • Circuit analysis
+                </div>
+                <div class="career-item">
+                    <strong>🏗️ Civil Engineer</strong><br>
+                    • Structural safety<br>
+                    • Material testing<br>
+                    • Load analysis
+                </div>
+                <div class="career-item">
+                    <strong>💻 Software Developer</strong><br>
+                    • A/B feature testing<br>
+                    • Algorithm optimization<br>
+                    • Performance metrics
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔗 Real-World Case Studies</h2>
+            <p>See how statistics is used in industry:</p>
+            <ul>
+                <li><strong>Netflix:</strong> A/B testing platform with thousands of experiments</li>
+                <li><strong>CDC:</strong> Public health statistics and disease tracking</li>
+                <li><strong>Google:</strong> Large-scale experimentation and analysis</li>
+                <li><strong>Hospitals:</strong> Quality improvement and patient safety stats</li>
+                <li><strong>Manufacturing:</strong> Statistical process control and quality</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🎓 College Majors That Require Statistics</h2>
+            <ul>
+                <li>All Engineering disciplines</li>
+                <li>Business & Economics</li>
+                <li>Psychology & Social Sciences</li>
+                <li>Biology & Health Sciences</li>
+                <li>Computer Science & Data Science</li>
+                <li>Environmental Science</li>
+                <li>Education Research</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📞 Take Action Today!</h2>
+            <p><strong>Steps to Register:</strong></p>
+            <ol>
+                <li>Talk to your current math teacher</li>
+                <li>Visit your guidance counselor</li>
+                <li>Check your school's AP course offerings</li>
+                <li>Discuss with parents/guardians</li>
+                <li>Register before the deadline</li>
+            </ol>
+        </div>
+        
+        <div class="contact-info">
+            <p><strong>Remember:</strong> Your future career starts with the decisions you make today!</p>
+            <p>"In God we trust, all others must bring data." - W. Edwards Deming</p>
+            <p style="font-size: 9pt; margin-top: 20px;">Print this flyer and share with friends!</p>
+        </div>
+    </div>
+    
+    </body>
+    </html>
+    """
+    
+    return flyer
+
+def create_presentation_pdf():
+    """Create a PDF version of the entire presentation"""
+    today = datetime.now().strftime("%B %d, %Y")
+    
+    pdf_content = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            @media print {{
+                @page {{
+                    size: letter;
+                    margin: 0.5in;
+                }}
+                body {{
+                    font-family: Arial, sans-serif;
+                    font-size: 12pt;
+                    line-height: 1.5;
+                }}
+                .slide {{
+                    page-break-after: always;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 20px;
+                    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                    min-height: 9in;
+                }}
+                h1 {{
+                    color: #667eea;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }}
+                h2 {{
+                    color: #764ba2;
+                    border-bottom: 3px solid #764ba2;
+                    padding-bottom: 10px;
+                }}
+                .example {{
+                    background: white;
+                    padding: 15px;
+                    margin: 10px 0;
+                    border-left: 4px solid #667eea;
+                    border-radius: 5px;
+                }}
+                .footer {{
+                    position: absolute;
+                    bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 10pt;
+                    color: #666;
+                }}
+                .page-number::after {{
+                    content: "Page " counter(page);
+                }}
+            }}
+        </style>
+    </head>
+    <body>
+    
+    <div class="slide">
+        <h1>📊 AP Statistics</h1>
+        <h2 style="text-align: center; color: #764ba2;">Your Gateway to Career Success</h2>
+        <p style="text-align: center; font-size: 14pt; margin-top: 40px;">Why Juniors Should Take AP Stats Senior Year</p>
+        <p style="text-align: center; font-size: 10pt; margin-top: 100px;">Presentation Date: {today}</p>
+        <div class="footer">
+            <span class="page-number"></span>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <h1>Why AP Statistics Matters</h1>
+        <h2>College & Career Benefits</h2>
+        <ul>
+            <li>Required or recommended for MOST college majors</li>
+            <li>Earn college credit and save tuition money</li>
+            <li>Build critical thinking and data analysis skills</li>
+            <li>Stand out on college applications</li>
+            <li>Prepare for data-driven careers in ANY field</li>
+        </ul>
+        
+        <h2>Real-World Applications</h2>
+        <p>Whether you're interested in healthcare, technology, engineering, business, or research, 
+        statistics is the foundation of decision-making in the modern workplace.</p>
+        
+        <div class="footer">
+            <span class="page-number"></span>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <h1>🏥 NICU Nurse</h1>
+        <h2>How Statistics Empowers NICU Nurses</h2>
+        
+        <div class="example">
+            <h3>Patient Monitoring & Risk Assessment</h3>
+            <p>NICU nurses analyze vital sign patterns (heart rate, oxygen levels, temperature) to detect abnormalities. 
+            Using statistical concepts like mean, standard deviation, and outliers, you can identify when a baby's 
+            vitals fall outside normal ranges.</p>
+        </div>
+        
+        <div class="example">
+            <h3>Treatment Effectiveness Analysis</h3>
+            <p>When implementing care protocols, nurses track outcomes across multiple patients. Using hypothesis 
+            testing and confidence intervals, you can determine if new treatments significantly improve outcomes.</p>
+        </div>
+        
+        <div class="footer">
+            <span class="page-number"></span>
+        </div>
+    </div>
+    
+    <!-- Continue with other slides... -->
+    
+    <div class="slide">
+        <h1>Take AP Statistics Next Year!</h1>
+        <h2 style="text-align: center; color: #667eea;">Your Future Starts Now</h2>
+        
+        <div style="text-align: center; margin: 40px 0;">
+            <p style="font-size: 14pt; margin: 10px;">✓ Prepare for ANY college major</p>
+            <p style="font-size: 14pt; margin: 10px;">✓ Build essential career skills</p>
+            <p style="font-size: 14pt; margin: 10px;">✓ Earn college credit</p>
+            <p style="font-size: 14pt; margin: 10px;">✓ Stand out to admissions</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <p style="font-size: 16pt; font-weight: bold; color: #764ba2;">
+            Your future career starts with the decisions you make today! 📊
+            </p>
+            <p style="margin-top: 30px;">
+            Questions? Talk to your guidance counselor about registering for AP Statistics!
+            </p>
+        </div>
+        
+        <div class="footer">
+            <span class="page-number"></span>
+        </div>
+    </div>
+    
+    </body>
+    </html>
+    """
+    
+    # Add all career slides
+    for slide in slides[2:-1]:  # Skip title and intro slides, and closing slide
+        if slide["type"] == "career":
+            career_html = f"""
+            <div class="slide">
+                <h1>{slide['title']}</h1>
+                <h2>{slide['content']['description']}</h2>
+            """
+            
+            for example in slide["content"]["examples"]:
+                career_html += f"""
+                <div class="example">
+                    <h3>{example['title']}</h3>
+                    <p>{example['content'].replace('<span class=\'highlight\'>', '').replace('</span>', '')}</p>
+                </div>
+                """
+            
+            career_html += """
+                <div class="footer">
+                    <span class="page-number"></span>
+                </div>
+            </div>
+            """
+            pdf_content = pdf_content.replace("<!-- Continue with other slides... -->", career_html + "\n<!-- Continue with other slides... -->")
+    
+    pdf_content = pdf_content.replace("<!-- Continue with other slides... -->", "")
+    
+    return pdf_content
+
 def display_resources(career_key):
     """Display resource links with real-world examples and case studies"""
     if career_key in CAREER_RESOURCES:
@@ -559,7 +965,24 @@ def main():
         st.subheader("📈 Quick Examples")
         st.markdown("[Netflix A/B Testing](https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15)")
         st.markdown("[CDC Case Studies](https://www.cdc.gov/nchs/pressroom/casestudies.htm)")
-        st.markdown"[Sports Analytics](https://fivethirtyeight.com/features/how-our-2020-nfl-predictions-work/)")
+        st.markdown("[Sports Analytics](https://fivethirtyeight.com/features/how-our-2020-nfl-predictions-work/)")
+        
+        # PRINT/SAVE BUTTONS
+        st.markdown("---")
+        st.subheader("🖨️ Print & Save")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("📄 Print Flyer", use_container_width=True):
+                flyer_html = create_flyer()
+                st.markdown(f'<iframe src="data:text/html;base64,{base64.b64encode(flyer_html.encode()).decode()}" width="100%" height="500"></iframe>', unsafe_allow_html=True)
+                st.info("Use your browser's Print function (Ctrl+P) to print the flyer")
+        
+        with col2:
+            if st.button("📊 Save Presentation", use_container_width=True):
+                pdf_html = create_presentation_pdf()
+                st.markdown(f'<iframe src="data:text/html;base64,{base64.b64encode(pdf_html.encode()).decode()}" width="100%" height="500"></iframe>', unsafe_allow_html=True)
+                st.info("Use your browser's Print function (Ctrl+P) and select 'Save as PDF'")
         
         # Download section
         st.markdown("---")
@@ -575,6 +998,22 @@ def main():
     
     # Main content area
     slide = slides[st.session_state.current_slide]
+    
+    # PRINT/SAVE BUTTONS IN MAIN AREA
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🖨️ Print 2-Page Flyer Summary", use_container_width=True, type="primary"):
+            flyer_html = create_flyer()
+            st.markdown(f'<iframe src="data:text/html;base64,{base64.b64encode(flyer_html.encode()).decode()}" width="100%" height="600"></iframe>', unsafe_allow_html=True)
+            st.success("Flyer loaded! Use Ctrl+P to print or save as PDF.")
+    
+    with col2:
+        if st.button("💾 Save Full Presentation", use_container_width=True, type="secondary"):
+            pdf_html = create_presentation_pdf()
+            st.markdown(f'<iframe src="data:text/html;base64,{base64.b64encode(pdf_html.encode()).decode()}" width="100%" height="600"></iframe>', unsafe_allow_html=True)
+            st.success("Presentation loaded! Use Ctrl+P and select 'Save as PDF'.")
+    
+    st.markdown("---")
     
     # Display slide based on type
     if slide["type"] == "title":
@@ -701,4 +1140,36 @@ def main():
         
         st.success(slide["content"]["call_to_action"])
         
-        # Final
+        # Final resources section
+        st.markdown("---")
+        st.markdown("### 🎓 Next Steps")
+        st.info(slide["content"]["contact"])
+    
+    # Footer with keyboard navigation hint
+    st.markdown("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.caption("💡 **Tip:** Use the sidebar to navigate or click the buttons below")
+        st.caption("🔗 **Resources:** Click links in each section to learn more about careers and statistics")
+    
+    # Bottom navigation buttons
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col1:
+        if st.button("⏮️ First", use_container_width=True):
+            st.session_state.current_slide = 0
+            st.rerun()
+    with col2:
+        if st.button("⬅️ Back", use_container_width=True, disabled=st.session_state.current_slide == 0):
+            st.session_state.current_slide -= 1
+            st.rerun()
+    with col4:
+        if st.button("Next ➡️", use_container_width=True, disabled=st.session_state.current_slide == len(slides)-1):
+            st.session_state.current_slide += 1
+            st.rerun()
+    with col5:
+        if st.button("Last ⏭️", use_container_width=True):
+            st.session_state.current_slide = len(slides) - 1
+            st.rerun()
+
+if __name__ == "__main__":
+    main()
