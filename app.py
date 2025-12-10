@@ -73,8 +73,109 @@ st.markdown("""
         cursor: pointer;
         font-weight: bold;
     }
+    
+    .resource-link {
+        background: #e7f3ff;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        border-left: 4px solid #667eea;
+    }
+    
+    .resource-link a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .resource-link a:hover {
+        text-decoration: underline;
+    }
 </style>
 """, unsafe_allow_html=True)
+
+# Career Resources Data
+CAREER_RESOURCES = {
+    "general": {
+        "College Board AP Statistics": "https://apcentral.collegeboard.org/courses/ap-statistics",
+        "American Statistical Association": "https://www.amstat.org/",
+        "Khan Academy Statistics": "https://www.khanacademy.org/math/statistics-probability",
+        "Stat Trek Statistics Tutorials": "https://stattrek.com/",
+        "Bureau of Labor Statistics": "https://www.bls.gov/ooh/math/statisticians.htm",
+    },
+    "NICU Nurse": {
+        "Nursing Statistics Resources": "https://www.nursingworld.org/practice-policy/workforce/what-is-nursing/",
+        "Neonatal Nursing Info": "https://nann.org/education/what-is-neonatal-nursing",
+        "Healthcare Data Analysis": "https://www.cdc.gov/nchs/index.htm",
+        "Evidence-Based Nursing": "https://www.ebn.bmj.com/",
+    },
+    "Marketing Professional": {
+        "Marketing Analytics Resources": "https://www.ama.org/marketing-analytics/",
+        "Digital Marketing Statistics": "https://www.thinkwithgoogle.com/",
+        "Consumer Behavior Research": "https://www.acrwebsite.org/",
+        "Data-Driven Marketing": "https://www.marketingprofs.com/charts/category/18/data-driven-marketing",
+    },
+    "Pediatric Surgeon": {
+        "Surgical Statistics": "https://www.facs.org/",
+        "Pediatric Surgery Resources": "https://www.pedsurglibrary.com/",
+        "Medical Research Statistics": "https://www.nih.gov/",
+        "Clinical Trial Analysis": "https://clinicaltrials.gov/",
+    },
+    "Registered Nurse": {
+        "Nursing Statistics Education": "https://www.nln.org/",
+        "Healthcare Quality Metrics": "https://www.ahrq.gov/talkingquality/index.html",
+        "Patient Safety Data": "https://www.psqh.com/",
+        "Nursing Research": "https://www.nursingresearch.org/",
+    },
+    "Cybersecurity Professional": {
+        "Cybersecurity Statistics": "https://www.sans.org/",
+        "Security Data Analysis": "https://www.cisecurity.org/",
+        "Threat Intelligence": "https://www.mitre.org/",
+        "InfoSec Statistics": "https://www.isaca.org/resources/isaca-journal/issues",
+    },
+    "Cosmetic Scientist": {
+        "Cosmetic Science Statistics": "https://www.scconline.org/",
+        "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
+        "Consumer Research Statistics": "https://www.quirks.com/",
+        "Beauty Industry Data": "https://www.cosmeticsdesign.com/",
+    },
+    "Dermatology Physician Assistant": {
+        "Dermatology Statistics": "https://www.aad.org/",
+        "Medical Diagnostics": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5540140/",
+        "Clinical Study Analysis": "https://www.jaad.org/",
+        "Skin Cancer Statistics": "https://www.cancer.org/cancer/types/skin-cancer.html",
+    },
+    "Electrical Engineer": {
+        "Engineering Statistics": "https://www.ieee.org/",
+        "Quality Control Methods": "https://asq.org/",
+        "Reliability Engineering": "https://www.weibull.com/",
+        "Electrical Standards": "https://www.nema.org/standards",
+    },
+    "Civil Engineer": {
+        "Structural Statistics": "https://www.asce.org/",
+        "Construction Data Analysis": "https://www.agc.org/",
+        "Materials Testing Standards": "https://www.astm.org/",
+        "Infrastructure Statistics": "https://www.infrastructurereportcard.org/",
+    },
+    "Pediatrician": {
+        "Pediatric Growth Charts": "https://www.cdc.gov/growthcharts/",
+        "Child Health Statistics": "https://www.aap.org/en/patient-care/",
+        "Clinical Evidence": "https://www.cochrane.org/",
+        "Vaccine Statistics": "https://www.cdc.gov/vaccines/index.html",
+    },
+    "Software Developer": {
+        "A/B Testing Resources": "https://www.optimizely.com/optimization-glossary/ab-testing/",
+        "Machine Learning Statistics": "https://www.kaggle.com/learn/statistics",
+        "Data Science Education": "https://www.datacamp.com/courses/statistics-fundamentals",
+        "Tech Industry Data": "https://stackoverflow.blog/",
+    },
+    "Physicist / Nanotechnologist": {
+        "Physics Statistics": "https://www.aps.org/",
+        "Nanotechnology Research": "https://www.nano.gov/",
+        "Experimental Design": "https://www.physicsforums.com/",
+        "Scientific Data Analysis": "https://www.nature.com/subjects/data-analysis",
+    }
+}
 
 # App data
 slides = [
@@ -94,7 +195,8 @@ slides = [
                 "Stand out on college applications",
                 "Prepare for data-driven careers in ANY field"
             ],
-            "applications": "Whether you're interested in healthcare, technology, engineering, business, or research, statistics is the foundation of decision-making in the modern workplace. Let's explore how AP Statistics prepares you for YOUR future career!"
+            "applications": "Whether you're interested in healthcare, technology, engineering, business, or research, statistics is the foundation of decision-making in the modern workplace. Let's explore how AP Statistics prepares you for YOUR future career!",
+            "resources": "general"
         },
         "type": "intro"
     },
@@ -111,7 +213,8 @@ slides = [
                     "title": "Treatment Effectiveness Analysis",
                     "content": "When implementing care protocols, nurses track outcomes across multiple patients. Using <span class='highlight'>hypothesis testing and confidence intervals</span>, you can determine if a new feeding schedule or medication dosage is significantly improving patient outcomes compared to standard care."
                 }
-            ]
+            ],
+            "resources": "NICU Nurse"
         },
         "type": "career"
     },
@@ -128,7 +231,8 @@ slides = [
                     "title": "Customer Segmentation & Targeting",
                     "content": "Understanding customer behavior requires analyzing demographic and purchase data. Using <span class='highlight'>probability distributions and sampling methods</span>, you can segment audiences, predict purchasing patterns, and create personalized marketing strategies for different customer groups."
                 }
-            ]
+            ],
+            "resources": "Marketing Professional"
         },
         "type": "career"
     },
@@ -145,7 +249,8 @@ slides = [
                     "title": "Clinical Research & Evidence-Based Practice",
                     "content": "Surgical techniques improve through research. Using <span class='highlight'>experimental design and statistical significance testing</span>, you can evaluate whether new surgical methods or robotic-assisted procedures produce better results than traditional techniques, ensuring you provide the best care."
                 }
-            ]
+            ],
+            "resources": "Pediatric Surgeon"
         },
         "type": "career"
     },
@@ -162,7 +267,8 @@ slides = [
                     "title": "Quality Improvement & Safety",
                     "content": "Healthcare facilities track infection rates, medication errors, and patient falls. Using <span class='highlight'>control charts and statistical process control</span>, nurses on quality improvement teams can identify trends, implement safety protocols, and measure whether interventions reduce adverse events."
                 }
-            ]
+            ],
+            "resources": "Registered Nurse"
         },
         "type": "career"
     },
@@ -179,7 +285,8 @@ slides = [
                     "title": "Risk Assessment & Security Metrics",
                     "content": "Organizations must prioritize security investments. Using <span class='highlight'>probability and risk modeling</span>, you can calculate the likelihood and potential impact of different cyber threats, helping leadership allocate resources to protect the most critical systems and data."
                 }
-            ]
+            ],
+            "resources": "Cybersecurity Professional"
         },
         "type": "career"
     },
@@ -196,7 +303,8 @@ slides = [
                     "title": "Formulation Optimization",
                     "content": "Creating effective cosmetics requires testing ingredient combinations. Using <span class='highlight'>regression analysis and optimization techniques</span>, you can identify which ingredient concentrations and ratios produce the best stability, texture, and efficacy results for new products."
                 }
-            ]
+            ],
+            "resources": "Cosmetic Scientist"
         },
         "type": "career"
     },
@@ -213,7 +321,8 @@ slides = [
                     "title": "Treatment Protocol Comparison",
                     "content": "Multiple treatment options exist for conditions like acne or eczema. Using <span class='highlight'>comparative analysis and confidence intervals</span>, you can evaluate clinical study data to determine which treatments have the highest success rates and recommend evidence-based therapies to patients."
                 }
-            ]
+            ],
+            "resources": "Dermatology Physician Assistant"
         },
         "type": "career"
     },
@@ -230,7 +339,8 @@ slides = [
                     "title": "Predictive Maintenance & Reliability",
                     "content": "Power systems and equipment must be maintained before failures occur. Using <span class='highlight'>probability distributions and survival analysis</span>, you can predict when components are likely to fail, schedule preventive maintenance, and minimize costly unexpected outages."
                 }
-            ]
+            ],
+            "resources": "Electrical Engineer"
         },
         "type": "career"
     },
@@ -247,7 +357,8 @@ slides = [
                     "title": "Materials Testing & Quality Assurance",
                     "content": "Construction projects require testing concrete strength, soil properties, and material durability. Using <span class='highlight'>sampling methods and confidence intervals</span>, you can determine if materials meet building codes and specifications based on test samples rather than testing every batch."
                 }
-            ]
+            ],
+            "resources": "Civil Engineer"
         },
         "type": "career"
     },
@@ -264,7 +375,8 @@ slides = [
                     "title": "Evidence-Based Treatment Decisions",
                     "content": "Medical research guides pediatric care. Using <span class='highlight'>clinical trial analysis and effect sizes</span>, you can interpret study results to determine which treatments, vaccines, or interventions are most effective for different childhood conditions and age groups."
                 }
-            ]
+            ],
+            "resources": "Pediatrician"
         },
         "type": "career"
     },
@@ -281,7 +393,8 @@ slides = [
                     "title": "Algorithm Performance & Machine Learning",
                     "content": "Modern software relies on AI and data analysis. Using <span class='highlight'>regression, classification, and model evaluation metrics</span>, you can build predictive algorithms, assess model accuracy, and optimize software performance based on user behavior data."
                 }
-            ]
+            ],
+            "resources": "Software Developer"
         },
         "type": "career"
     },
@@ -298,7 +411,8 @@ slides = [
                     "title": "Materials Characterization & Modeling",
                     "content": "Nanotechnology research involves testing material properties at atomic scales. Using <span class='highlight'>statistical mechanics and distribution analysis</span>, you can analyze particle behavior, predict material properties, and optimize nanomaterial designs for specific applications."
                 }
-            ]
+            ],
+            "resources": "Physicist / Nanotechnologist"
         },
         "type": "career"
     },
@@ -355,6 +469,28 @@ All content is fully editable once transferred to PowerPoint or Google Slides.""
     
     return instructions
 
+def display_resources(career_key):
+    """Display resource links for a specific career"""
+    if career_key in CAREER_RESOURCES:
+        st.markdown("### 🔗 Learn More & Resources")
+        st.markdown("Explore these resources to learn how statistics applies to this career:")
+        
+        resources = CAREER_RESOURCES[career_key]
+        for name, url in resources.items():
+            st.markdown(f"""
+            <div class='resource-link'>
+                📚 <a href='{url}' target='_blank'>{name}</a>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Also show general resources if this is a specific career
+        if career_key != "general":
+            st.markdown("---")
+            st.markdown("#### General AP Statistics Resources")
+            general_resources = CAREER_RESOURCES["general"]
+            for name, url in list(general_resources.items())[:3]:  # Show only top 3
+                st.markdown(f"• [{name}]({url})", unsafe_allow_html=True)
+
 def main():
     # Initialize session state for slide navigation
     if 'current_slide' not in st.session_state:
@@ -390,6 +526,19 @@ def main():
         st.progress((st.session_state.current_slide + 1) / len(slides))
         st.caption(f"Slide {st.session_state.current_slide + 1} of {len(slides)}")
         
+        # Resource Links Section
+        st.markdown("---")
+        st.subheader("🔗 Quick Resource Links")
+        
+        # Display relevant resources based on current slide
+        slide = slides[st.session_state.current_slide]
+        if slide["type"] in ["intro", "career"] and "resources" in slide["content"]:
+            career_key = slide["content"]["resources"]
+            if career_key in CAREER_RESOURCES:
+                resources = CAREER_RESOURCES[career_key]
+                for name, url in list(resources.items())[:2]:  # Show top 2 in sidebar
+                    st.markdown(f"[{name}]({url})")
+        
         # Download section
         st.markdown("---")
         st.subheader("Download Instructions")
@@ -401,6 +550,13 @@ def main():
             file_name="PowerPoint_Conversion_Instructions.txt",
             mime="text/plain"
         )
+        
+        # Quick AP Stats info
+        st.markdown("---")
+        st.subheader("AP Statistics Info")
+        st.markdown("[College Board AP Stats](https://apcentral.collegeboard.org/courses/ap-statistics)")
+        st.markdown("[AP Stats Course Guide](https://apstudents.collegeboard.org/courses/ap-statistics)")
+        st.markdown("[AP Stats Practice Tests](https://www.khanacademy.org/math/ap-statistics)")
     
     # Main content area
     slide = slides[st.session_state.current_slide]
@@ -410,6 +566,16 @@ def main():
         st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
         st.markdown(f"<h2 class='sub-header'>{slide['subtitle']}</h2>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='text-align: center; color: #667eea; margin-top: 2rem;'>{slide['content']}</h3>", unsafe_allow_html=True)
+        
+        # Add resource box
+        with st.expander("📚 Quick Start Resources"):
+            st.markdown("""
+            **Start your AP Statistics journey with these resources:**
+            - [Official College Board AP Statistics Page](https://apcentral.collegeboard.org/courses/ap-statistics)
+            - [Khan Academy AP Statistics Course](https://www.khanacademy.org/math/ap-statistics)
+            - [AP Statistics Student Guide](https://apstudents.collegeboard.org/courses/ap-statistics)
+            - [Statistics Career Information](https://www.amstat.org/asa/education/Career-Paths-for-Statisticians.aspx)
+            """)
         
         # Add decorative gradient background
         st.markdown("""
@@ -432,6 +598,10 @@ def main():
         st.subheader("Real-World Applications")
         st.info(slide["content"]["applications"])
         st.markdown("</div>", unsafe_allow_html=True)
+        
+        # Display general resources
+        st.markdown("---")
+        display_resources("general")
     
     elif slide["type"] == "career":
         st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
@@ -448,9 +618,34 @@ def main():
                     st.markdown("</div>", unsafe_allow_html=True)
             
             st.markdown("</div>", unsafe_allow_html=True)
+        
+        # Display career-specific resources
+        if "resources" in slide["content"]:
+            display_resources(slide["content"]["resources"])
     
     elif slide["type"] == "closing":
         st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
+        
+        # Add resource section before closing
+        with st.expander("🎓 Next Steps & Resources", expanded=True):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**AP Statistics Resources:**")
+                st.markdown("""
+                - [College Board AP Stats](https://apcentral.collegeboard.org/courses/ap-statistics)
+                - [AP Stats Course Overview](https://apstudents.collegeboard.org/courses/ap-statistics)
+                - [Practice Questions & Tests](https://www.khanacademy.org/math/ap-statistics)
+                - [Statistics Career Paths](https://www.amstat.org/asa/education/Career-Paths-for-Statisticians.aspx)
+                """)
+            
+            with col2:
+                st.markdown("**College Planning:**")
+                st.markdown("""
+                - [College Majors Requiring Stats](https://www.collegeboard.org/)
+                - [Statistics in College Admissions](https://blog.collegeboard.org/)
+                - [Career Exploration Tools](https://www.bls.gov/ooh/math/statisticians.htm)
+                - [STEM Career Resources](https://www.ed.gov/stem)
+                """)
         
         # Add decorative gradient background
         st.markdown("""
@@ -471,6 +666,7 @@ def main():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.caption("💡 **Tip:** Use the sidebar to navigate or click the buttons below")
+        st.caption("🔗 **Resources:** Click links in each section to learn more about careers and statistics")
     
     # Bottom navigation buttons
     col1, col2, col3, col4, col5 = st.columns(5)
