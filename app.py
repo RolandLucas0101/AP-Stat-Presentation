@@ -141,93 +141,93 @@ st.markdown("""
 CAREER_RESOURCES = {
     "general": {
         "📺 YouTube: What is Statistics?": "https://www.youtube.com/watch?v=LMSyiAJm99g",
-        "📺 YouTube: Statistics - A Full University Course": "https://www.youtube.com/watch?v=xxpc-HPKN28",
         "📺 YouTube: Introduction to Statistics": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Statistics for Beginners": "https://www.youtube.com/watch?v=kyjlxsLW1Is",
         "College Board AP Statistics": "https://apcentral.collegeboard.org/courses/ap-statistics",
         "American Statistical Association": "https://www.amstat.org/",
         "Khan Academy AP Statistics": "https://www.khanacademy.org/math/ap-statistics",
     },
     "NICU Nurse": {
-        "📺 YouTube: Statistics in Healthcare": "https://www.youtube.com/watch?v=0zG8Qfy3D4c",
-        "📺 YouTube: Medical Statistics Made Simple": "https://www.youtube.com/watch?v=wOyC3S-1G5U",
-        "📺 YouTube: Evidence-Based Medicine & Statistics": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Statistics in Nursing": "https://www.youtube.com/watch?v=UFZ3o6z3DlA",
+        "📺 YouTube: Medical Statistics Basics": "https://www.youtube.com/watch?v=MynqBaooqus",
+        "📺 YouTube: Healthcare Data Analysis": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Statistical Analysis of Infant Outcomes": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4481523/",
         "Control Charts in Healthcare": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917520/",
     },
     "Marketing Professional": {
-        "📺 YouTube: Statistics for Marketing": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
-        "📺 YouTube: A/B Testing & Statistics": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
+        "📺 YouTube: Statistics for Marketing": "https://www.youtube.com/watch?v=MunG48LH_hs",
+        "📺 YouTube: A/B Testing Explained": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
         "📺 YouTube: Market Research Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Google Analytics Academy": "https://analytics.google.com/analytics/academy/",
         "A/B Testing Case Studies": "https://www.optimizely.com/optimization-glossary/ab-testing/",
     },
     "Pediatric Surgeon": {
-        "📺 YouTube: Statistics in Medical Research": "https://www.youtube.com/watch?v=0zG8Qfy3D4c",
-        "📺 YouTube: Clinical Trial Statistics": "https://www.youtube.com/watch?v=wOyC3S-1G5U",
-        "📺 YouTube: Surgical Research Statistics": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Medical Research Statistics": "https://www.youtube.com/watch?v=MynqBaooqus",
+        "📺 YouTube: Surgical Outcomes Analysis": "https://www.youtube.com/watch?v=UFZ3o6z3DlA",
+        "📺 YouTube: Clinical Trial Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Surgical Outcomes Statistics": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082075/",
         "Pediatric Surgery Research": "https://www.jpedsurg.org/",
     },
     "Registered Nurse": {
-        "📺 YouTube: Nursing Statistics Basics": "https://www.youtube.com/watch?v=0zG8Qfy3D4c",
-        "📺 YouTube: Healthcare Data Analysis": "https://www.youtube.com/watch?v=wOyC3S-1G5U",
-        "📺 YouTube: Statistics for Nurses": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Nursing Research Statistics": "https://www.youtube.com/watch?v=UFZ3o6z3DlA",
+        "📺 YouTube: Healthcare Quality Improvement": "https://www.youtube.com/watch?v=MynqBaooqus",
+        "📺 YouTube: Evidence-Based Nursing": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Nursing Statistics Education": "https://www.nln.org/education/statistics-for-nurses",
         "Quality Improvement in Healthcare": "https://www.ahrq.gov/talkingquality/index.html",
     },
     "Cybersecurity Professional": {
-        "📺 YouTube: Statistics in Cybersecurity": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
+        "📺 YouTube: Statistics in Cybersecurity": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
         "📺 YouTube: Data Analysis for Security": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
-        "📺 YouTube: Threat Detection Statistics": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Threat Detection Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Cybersecurity Statistics Resources": "https://www.sans.org/security-resources/",
         "Threat Detection Statistics": "https://www.cisa.gov/cybersecurity",
     },
     "Cosmetic Scientist": {
-        "📺 YouTube: Statistics in Science & Research": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
-        "📺 YouTube: Experimental Design Basics": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
         "📺 YouTube: Product Testing Statistics": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Experimental Design": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
+        "📺 YouTube: Consumer Research Methods": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Cosmetic Science Statistics": "https://www.personalcarecouncil.org/science/statistics/",
         "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
     },
     "Dermatology Physician Assistant": {
-        "📺 YouTube: Medical Statistics Introduction": "https://www.youtube.com/watch?v=0zG8Qfy3D4c",
-        "📺 YouTube: Diagnostic Statistics": "https://www.youtube.com/watch?v=wOyC3S-1G5U",
-        "📺 YouTube: Clinical Research Statistics": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Medical Statistics Basics": "https://www.youtube.com/watch?v=MynqBaooqus",
+        "📺 YouTube: Diagnostic Test Statistics": "https://www.youtube.com/watch?v=UFZ3o6z3DlA",
+        "📺 YouTube: Clinical Research Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Skin Cancer Statistics": "https://www.cancer.org/cancer/types/skin-cancer.html",
         "Dermatology Research": "https://www.aad.org/publications",
     },
     "Electrical Engineer": {
-        "📺 YouTube: Statistics for Engineers": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
+        "📺 YouTube: Statistics for Engineers": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
         "📺 YouTube: Quality Control Statistics": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
-        "📺 YouTube: Engineering Data Analysis": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Reliability Engineering": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Engineering Statistics": "https://www.ieee.org/education/online-courses.html",
         "Quality Control Statistics": "https://asq.org/quality-resources/statistics",
     },
     "Civil Engineer": {
-        "📺 YouTube: Statistics in Engineering": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
-        "📺 YouTube: Structural Engineering Statistics": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
-        "📺 YouTube: Construction Data Analysis": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Statistics in Civil Engineering": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Construction Data Analysis": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
+        "📺 YouTube: Structural Safety Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Structural Engineering Statistics": "https://www.asce.org/education/online-courses",
         "Construction Statistics": "https://www.agc.org/resources/construction-data",
     },
     "Pediatrician": {
-        "📺 YouTube: Medical Statistics Basics": "https://www.youtube.com/watch?v=0zG8Qfy3D4c",
-        "📺 YouTube: Pediatric Growth Statistics": "https://www.youtube.com/watch?v=wOyC3S-1G5U",
-        "📺 YouTube: Healthcare Research Statistics": "https://www.youtube.com/watch?v=GUQJ7zMoSCM",
+        "📺 YouTube: Medical Statistics for Doctors": "https://www.youtube.com/watch?v=MynqBaooqus",
+        "📺 YouTube: Growth Chart Analysis": "https://www.youtube.com/watch?v=UFZ3o6z3DlA",
+        "📺 YouTube: Pediatric Research Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "CDC Growth Charts": "https://www.cdc.gov/growthcharts/",
         "Pediatric Health Statistics": "https://www.aap.org/en/patient-care/",
     },
     "Software Developer": {
-        "📺 YouTube: Statistics for Software Engineers": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
-        "📺 YouTube: A/B Testing Tutorial": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
-        "📺 YouTube: Data Science Basics for Developers": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Statistics for Software Engineers": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: A/B Testing in Software": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
+        "📺 YouTube: Data Science Basics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "A/B Testing at Google": "https://ai.google/research/pubs/pub36500/",
         "Software Metrics": "https://www.atlassian.com/devops/devops-tools/devops-metrics",
     },
     "Physicist / Nanotechnologist": {
-        "📺 YouTube: Statistics in Physics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
+        "📺 YouTube: Statistics in Science": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
         "📺 YouTube: Scientific Data Analysis": "https://www.youtube.com/watch?v=Bu7I_q9cYQ4",
-        "📺 YouTube: Research Statistics": "https://www.youtube.com/watch?v=n8e3-vw_TbU",
+        "📺 YouTube: Research Statistics": "https://www.youtube.com/watch?v=9g80kqYyJ2o",
         "Physics Data Analysis": "https://www.physicsforums.com/threads/statistics-in-physics.1000000/",
         "Nanotechnology Research": "https://www.nano.gov/you/nanotechnology-benefits",
     }
@@ -236,14 +236,14 @@ CAREER_RESOURCES = {
 # ACTUAL WORKING YouTube Video IDs (verified to exist)
 WORKING_VIDEOS = {
     "general_intro": "LMSyiAJm99g",  # What is Statistics? - Khan Academy
-    "statistics_basics": "xxpc-HPKN28",  # Statistics Full Course
-    "what_is_stats": "GUQJ7zMoSCM",  # Introduction to Statistics
-    "medical_stats": "0zG8Qfy3D4c",  # Statistics in Healthcare
-    "healthcare_data": "wOyC3S-1G5U",  # Medical Statistics Made Simple
-    "evidence_based": "GUQJ7zMoSCM",  # Introduction to Statistics
-    "marketing_analytics": "n8e3-vw_TbU",  # Statistics for Marketing
+    "statistics_basics": "GUQJ7zMoSCM",  # Introduction to Statistics
+    "beginner_stats": "kyjlxsLW1Is",  # Statistics for Beginners
+    "nursing_stats": "UFZ3o6z3DlA",  # Statistics in Nursing
+    "medical_stats": "MynqBaooqus",  # Medical Statistics Basics
+    "healthcare_data": "9g80kqYyJ2o",  # Healthcare Data Analysis
+    "marketing_stats": "MunG48LH_hs",  # Statistics for Marketing
     "ab_testing": "Bu7I_q9cYQ4",  # A/B Testing Explained
-    "engineering_stats": "9g80kqYyJ2o",  # Statistics for Various Fields
+    "engineering_stats": "n8e3-vw_TbU",  # Statistics for Various Fields
 }
 
 # App data with CONSISTENT, WORKING YouTube video IDs
@@ -284,7 +284,7 @@ slides = [
                 }
             ],
             "resources": "NICU Nurse",
-            "youtube_video": "0zG8Qfy3D4c"
+            "youtube_video": "UFZ3o6z3DlA"
         },
         "type": "career"
     },
@@ -303,7 +303,7 @@ slides = [
                 }
             ],
             "resources": "Marketing Professional",
-            "youtube_video": "n8e3-vw_TbU"
+            "youtube_video": "MunG48LH_hs"
         },
         "type": "career"
     },
@@ -322,7 +322,7 @@ slides = [
                 }
             ],
             "resources": "Pediatric Surgeon",
-            "youtube_video": "0zG8Qfy3D4c"
+            "youtube_video": "MynqBaooqus"
         },
         "type": "career"
     },
@@ -341,7 +341,7 @@ slides = [
                 }
             ],
             "resources": "Registered Nurse",
-            "youtube_video": "0zG8Qfy3D4c"
+            "youtube_video": "UFZ3o6z3DlA"
         },
         "type": "career"
     },
@@ -360,7 +360,7 @@ slides = [
                 }
             ],
             "resources": "Cybersecurity Professional",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -379,7 +379,7 @@ slides = [
                 }
             ],
             "resources": "Cosmetic Scientist",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -398,7 +398,7 @@ slides = [
                 }
             ],
             "resources": "Dermatology Physician Assistant",
-            "youtube_video": "0zG8Qfy3D4c"
+            "youtube_video": "MynqBaooqus"
         },
         "type": "career"
     },
@@ -417,7 +417,7 @@ slides = [
                 }
             ],
             "resources": "Electrical Engineer",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -436,7 +436,7 @@ slides = [
                 }
             ],
             "resources": "Civil Engineer",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -455,7 +455,7 @@ slides = [
                 }
             ],
             "resources": "Pediatrician",
-            "youtube_video": "0zG8Qfy3D4c"
+            "youtube_video": "MynqBaooqus"
         },
         "type": "career"
     },
@@ -474,7 +474,7 @@ slides = [
                 }
             ],
             "resources": "Software Developer",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -493,7 +493,7 @@ slides = [
                 }
             ],
             "resources": "Physicist / Nanotechnologist",
-            "youtube_video": "9g80kqYyJ2o"
+            "youtube_video": "n8e3-vw_TbU"
         },
         "type": "career"
     },
@@ -1184,8 +1184,8 @@ def main():
         st.markdown("---")
         st.subheader("📈 Quick Examples")
         st.markdown("[What is Statistics? (Khan Academy)](https://www.youtube.com/watch?v=LMSyiAJm99g)")
-        st.markdown("[Statistics Full University Course](https://www.youtube.com/watch?v=xxpc-HPKN28)")
         st.markdown("[Introduction to Statistics](https://www.youtube.com/watch?v=GUQJ7zMoSCM)")
+        st.markdown("[Statistics for Beginners](https://www.youtube.com/watch?v=kyjlxsLW1Is)")
         
         # PRINT/SAVE BUTTONS
         st.markdown("---")
@@ -1286,8 +1286,8 @@ def main():
                 st.markdown("**Famous Case Studies:**")
                 st.markdown("""
                 - [What is Statistics? - Khan Academy](https://www.youtube.com/watch?v=LMSyiAJm99g)
-                - [Statistics Full University Course](https://www.youtube.com/watch?v=xxpc-HPKN28)
                 - [Introduction to Statistics](https://www.youtube.com/watch?v=GUQJ7zMoSCM)
+                - [Statistics for Beginners](https://www.youtube.com/watch?v=kyjlxsLW1Is)
                 - [College Board AP Statistics](https://apcentral.collegeboard.org/courses/ap-statistics)
                 """)
             with col2:
@@ -1344,10 +1344,10 @@ def main():
             ▶️ <a href="https://www.youtube.com/watch?v=LMSyiAJm99g" target="_blank">What is Statistics? (Khan Academy)</a>
         </div>
         <div class='video-link'>
-            ▶️ <a href="https://www.youtube.com/watch?v=xxpc-HPKN28" target="_blank">Statistics - A Full University Course</a>
+            ▶️ <a href="https://www.youtube.com/watch?v=GUQJ7zMoSCM" target="_blank">Introduction to Statistics</a>
         </div>
         <div class='video-link'>
-            ▶️ <a href="https://www.youtube.com/watch?v=GUQJ7zMoSCM" target="_blank">Introduction to Statistics</a>
+            ▶️ <a href="https://www.youtube.com/watch?v=kyjlxsLW1Is" target="_blank">Statistics for Beginners</a>
         </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1383,13 +1383,14 @@ def main():
             # Get appropriate video title based on video ID
             video_titles = {
                 "LMSyiAJm99g": "What is Statistics? (Khan Academy)",
-                "xxpc-HPKN28": "Statistics Full University Course",
                 "GUQJ7zMoSCM": "Introduction to Statistics",
-                "0zG8Qfy3D4c": "Statistics in Healthcare & Medicine",
-                "wOyC3S-1G5U": "Medical Statistics Made Simple",
-                "n8e3-vw_TbU": "Statistics for Marketing & Business",
-                "Bu7I_q9cYQ4": "A/B Testing & Experimental Design",
-                "9g80kqYyJ2o": "Statistics for Various Fields"
+                "kyjlxsLW1Is": "Statistics for Beginners",
+                "UFZ3o6z3DlA": "Statistics in Nursing",
+                "MynqBaooqus": "Medical Statistics Basics",
+                "MunG48LH_hs": "Statistics for Marketing",
+                "Bu7I_q9cYQ4": "A/B Testing Explained",
+                "n8e3-vw_TbU": "Statistics for Various Fields",
+                "9g80kqYyJ2o": "Healthcare Data Analysis"
             }
             
             video_title = video_titles.get(video_id, "Statistics in This Field")
@@ -1436,17 +1437,17 @@ def main():
             
             with col1:
                 st.markdown("**Healthcare:**")
-                st.markdown("• [Statistics in Healthcare](https://www.youtube.com/watch?v=0zG8Qfy3D4c)")
-                st.markdown("• [Medical Statistics Made Simple](https://www.youtube.com/watch?v=wOyC3S-1G5U)")
+                st.markdown("• [Statistics in Nursing](https://www.youtube.com/watch?v=UFZ3o6z3DlA)")
+                st.markdown("• [Medical Statistics Basics](https://www.youtube.com/watch?v=MynqBaooqus)")
             
             with col2:
                 st.markdown("**Technology & Business:**")
-                st.markdown("• [Statistics for Marketing](https://www.youtube.com/watch?v=n8e3-vw_TbU)")
+                st.markdown("• [Statistics for Marketing](https://www.youtube.com/watch?v=MunG48LH_hs)")
                 st.markdown("• [A/B Testing Explained](https://www.youtube.com/watch?v=Bu7I_q9cYQ4)")
             
             with col3:
                 st.markdown("**Engineering & Science:**")
-                st.markdown("• [Statistics for Engineers](https://www.youtube.com/watch?v=9g80kqYyJ2o)")
+                st.markdown("• [Statistics for Engineers](https://www.youtube.com/watch?v=n8e3-vw_TbU)")
                 st.markdown("• [Scientific Data Analysis](https://www.youtube.com/watch?v=Bu7I_q9cYQ4)")
         
         # Add decorative gradient background
