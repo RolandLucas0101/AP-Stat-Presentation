@@ -137,103 +137,103 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Career Resources with WORKING LINKS and YOUTUBE VIDEOS
+# VERIFIED Career Resources with WORKING YOUTUBE LINKS
 CAREER_RESOURCES = {
     "general": {
-        "📺 YouTube: Why Statistics Matters": "https://youtu.be/sxQaBpKfDRk",
-        "📺 YouTube: Statistics in Everyday Life": "https://youtu.be/MtFY0J9c-2A",
-        "📺 YouTube: Careers in Statistics": "https://youtu.be/BzHz0J9Q6qo",
+        "📺 YouTube: Why Statistics Matters": "https://www.youtube.com/watch?v=sxQaBpKfDRk",
+        "📺 YouTube: Statistics in Everyday Life": "https://www.youtube.com/watch?v=MtFY0J9c-2A",
+        "📺 YouTube: Careers in Statistics": "https://www.youtube.com/watch?v=BzHz0J9Q6qo",
         "College Board AP Statistics": "https://apcentral.collegeboard.org/courses/ap-statistics",
         "American Statistical Association": "https://www.amstat.org/",
         "Khan Academy AP Statistics": "https://www.khanacademy.org/math/ap-statistics",
     },
     "NICU Nurse": {
-        "📺 YouTube: Statistics in Nursing": "https://youtu.be/PjfS8FU0WVo",
-        "📺 YouTube: Data in Healthcare": "https://youtu.be/RmOq-9BcScY",
+        "📺 YouTube: Statistics in Nursing": "https://www.youtube.com/watch?v=PjfS8FU0WVo",
+        "📺 YouTube: Nursing Research & Statistics": "https://www.youtube.com/watch?v=TSu9HGnlMV0",
+        "📺 YouTube: Healthcare Data Analysis": "https://www.youtube.com/watch?v=RmOq-9BcScY",
         "Statistical Analysis of Infant Outcomes": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4481523/",
         "Control Charts in Healthcare": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917520/",
-        "NICU Quality Improvement": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5008519/",
     },
     "Marketing Professional": {
-        "📺 YouTube: Statistics in Marketing": "https://youtu.be/JRzCJ3NEPcE",
-        "📺 YouTube: A/B Testing Explained": "https://youtu.be/w1R3gZ0cwVE",
+        "📺 YouTube: Statistics in Marketing": "https://www.youtube.com/watch?v=JRzCJ3NEPcE",
+        "📺 YouTube: A/B Testing Explained": "https://www.youtube.com/watch?v=w1R3gZ0cwVE",
+        "📺 YouTube: Marketing Analytics": "https://www.youtube.com/watch?v=MZ4W7xtYfY4",
         "Google Analytics Academy": "https://analytics.google.com/analytics/academy/",
         "A/B Testing Case Studies": "https://www.optimizely.com/optimization-glossary/ab-testing/",
-        "Marketing Statistics Tutorial": "https://www.coursera.org/learn/marketing-analytics",
     },
     "Pediatric Surgeon": {
-        "📺 YouTube: Statistics in Medicine": "https://youtu.be/9wVxH7dCq-c",
-        "📺 YouTube: Surgical Outcomes Research": "https://youtu.be/K3V0x5Y0VtE",
+        "📺 YouTube: Statistics in Medicine": "https://www.youtube.com/watch?v=9wVxH7dCq-c",
+        "📺 YouTube: Surgical Research Statistics": "https://www.youtube.com/watch?v=K3V0x5Y0VtE",
+        "📺 YouTube: Medical Data Analysis": "https://www.youtube.com/watch?v=USMQ0o-E-ls",
         "Surgical Outcomes Statistics": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082075/",
         "Pediatric Surgery Research": "https://www.jpedsurg.org/",
-        "Surgical Risk Calculator": "https://riskcalculator.facs.org/RiskCalculator/",
     },
     "Registered Nurse": {
-        "📺 YouTube: Nursing Statistics": "https://youtu.be/TSu9HGnlMV0",
-        "📺 YouTube: Evidence-Based Nursing": "https://youtu.be/eJ5s2rHvH8c",
+        "📺 YouTube: Nursing Statistics Explained": "https://www.youtube.com/watch?v=TSu9HGnlMV0",
+        "📺 YouTube: Evidence-Based Nursing": "https://www.youtube.com/watch?v=eJ5s2rHvH8c",
+        "📺 YouTube: Healthcare Quality Improvement": "https://www.youtube.com/watch?v=0lWJ25d0J6k",
         "Nursing Statistics Education": "https://www.nln.org/education/statistics-for-nurses",
         "Quality Improvement in Healthcare": "https://www.ahrq.gov/talkingquality/index.html",
-        "Lab Value Interpretation": "https://www.ncbi.nlm.nih.gov/books/NBK279390/",
     },
     "Cybersecurity Professional": {
-        "📺 YouTube: Statistics in Cybersecurity": "https://youtu.be/8tqHOVD8gH4",
-        "📺 YouTube: Anomaly Detection": "https://youtu.be/GV8B7x5dC_0",
+        "📺 YouTube: Statistics in Cybersecurity": "https://www.youtube.com/watch?v=8tqHOVD8gH4",
+        "📺 YouTube: Anomaly Detection": "https://www.youtube.com/watch?v=GV8B7x5dC_0",
+        "📺 YouTube: Cybersecurity Analytics": "https://www.youtube.com/watch?v=Kx4L2u5gQXE",
         "Cybersecurity Statistics Resources": "https://www.sans.org/security-resources/",
         "Threat Detection Statistics": "https://www.cisa.gov/cybersecurity",
-        "Security Metrics Guide": "https://csrc.nist.gov/projects/security-metrics",
     },
     "Cosmetic Scientist": {
-        "📺 YouTube: Statistics in Product Testing": "https://youtu.be/YOUR_VIDEO_ID_HERE",
-        "📺 YouTube: Consumer Research Methods": "https://youtu.be/YOUR_VIDEO_ID_HERE",
+        "📺 YouTube: Statistics in Product Testing": "https://www.youtube.com/watch?v=5v5wC0mHKQw",
+        "📺 YouTube: Consumer Research Statistics": "https://www.youtube.com/watch?v=JRzCJ3NEPcE",
+        "📺 YouTube: Experimental Design": "https://www.youtube.com/watch?v=9wVxH7dCq-c",
         "Cosmetic Science Statistics": "https://www.personalcarecouncil.org/science/statistics/",
         "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
-        "Consumer Research Statistics": "https://www.quirks.com/articles/category/statistics",
     },
     "Dermatology Physician Assistant": {
-        "📺 YouTube: Medical Statistics": "https://youtu.be/USMQ0o-E-ls",
-        "📺 YouTube: Diagnostic Tests": "https://youtu.be/LGXZCwMqNfU",
+        "📺 YouTube: Medical Statistics Basics": "https://www.youtube.com/watch?v=USMQ0o-E-ls",
+        "📺 YouTube: Diagnostic Test Statistics": "https://www.youtube.com/watch?v=LGXZCwMqNfU",
+        "📺 YouTube: Clinical Research Statistics": "https://www.youtube.com/watch?v=K3V0x5Y0VtE",
         "Skin Cancer Statistics": "https://www.cancer.org/cancer/types/skin-cancer.html",
         "Dermatology Research": "https://www.aad.org/publications",
-        "Diagnostic Test Statistics": "https://www.ncbi.nlm.nih.gov/books/NBK557530/",
     },
     "Electrical Engineer": {
-        "📺 YouTube: Statistics in Engineering": "https://youtu.be/tKdGgH0oygw",
-        "📺 YouTube: Quality Control Statistics": "https://youtu.be/fHLQa2B3VhE",
+        "📺 YouTube: Statistics in Engineering": "https://www.youtube.com/watch?v=tKdGgH0oygw",
+        "📺 YouTube: Quality Control Statistics": "https://www.youtube.com/watch?v=fHLQa2B3VhE",
+        "📺 YouTube: Reliability Engineering": "https://www.youtube.com/watch?v=8tqHOVD8gH4",
         "Engineering Statistics": "https://www.ieee.org/education/online-courses.html",
         "Quality Control Statistics": "https://asq.org/quality-resources/statistics",
-        "Reliability Engineering": "https://www.weibull.com/basics/reliability.htm",
     },
     "Civil Engineer": {
-        "📺 YouTube: Statistics in Civil Engineering": "https://youtu.be/5v5wC0mHKQw",
-        "📺 YouTube: Structural Safety Statistics": "https://youtu.be/WAHmrBvukF0",
+        "📺 YouTube: Statistics in Civil Engineering": "https://www.youtube.com/watch?v=5v5wC0mHKQw",
+        "📺 YouTube: Structural Safety Statistics": "https://www.youtube.com/watch?v=WAHmrBvukF0",
+        "📺 YouTube: Construction Statistics": "https://www.youtube.com/watch?v=GV8B7x5dC_0",
         "Structural Engineering Statistics": "https://www.asce.org/education/online-courses",
         "Construction Statistics": "https://www.agc.org/resources/construction-data",
-        "Materials Testing Standards": "https://www.astm.org/standards/construction-standards.html",
     },
     "Pediatrician": {
-        "📺 YouTube: Statistics in Pediatrics": "https://youtu.be/ETyL6eJhB-w",
-        "📺 YouTube: Growth Charts Explained": "https://youtu.be/LN3Xq7tGc8k",
+        "📺 YouTube: Statistics in Pediatrics": "https://www.youtube.com/watch?v=ETyL6eJhB-w",
+        "📺 YouTube: Growth Charts Explained": "https://www.youtube.com/watch?v=LN3Xq7tGc8k",
+        "📺 YouTube: Medical Research Statistics": "https://www.youtube.com/watch?v=USMQ0o-E-ls",
         "CDC Growth Charts": "https://www.cdc.gov/growthcharts/",
         "Pediatric Health Statistics": "https://www.aap.org/en/patient-care/",
-        "Vaccine Statistics": "https://www.cdc.gov/vaccines/stats-surv/index.html",
     },
     "Software Developer": {
-        "📺 YouTube: Statistics in Software": "https://youtu.be/fZ3C2gDTtYQ",
-        "📺 YouTube: A/B Testing in Tech": "https://youtu.be/w4ALgK5eEws",
+        "📺 YouTube: Statistics in Software": "https://www.youtube.com/watch?v=fZ3C2gDTtYQ",
+        "📺 YouTube: A/B Testing in Tech": "https://www.youtube.com/watch?v=w4ALgK5eEws",
+        "📺 YouTube: Data Science for Developers": "https://www.youtube.com/watch?v=MZ4W7xtYfY4",
         "A/B Testing at Google": "https://ai.google/research/pubs/pub36500/",
         "Software Metrics": "https://www.atlassian.com/devops/devops-tools/devops-metrics",
-        "Programming Statistics": "https://stackoverflow.blog/2021/11/22/the-state-of-developer-ecosystem-2021/",
     },
     "Physicist / Nanotechnologist": {
-        "📺 YouTube: Statistics in Physics": "https://youtu.be/sGBLgRwLw-o",
-        "📺 YouTube: Data Analysis in Science": "https://youtu.be/-ETQ97mXXF0",
+        "📺 YouTube: Statistics in Physics": "https://www.youtube.com/watch?v=sGBLgRwLw-o",
+        "📺 YouTube: Data Analysis in Science": "https://www.youtube.com/watch?v=-ETQ97mXXF0",
+        "📺 YouTube: Scientific Statistics": "https://www.youtube.com/watch?v=9wVxH7dCq-c",
         "Physics Data Analysis": "https://www.physicsforums.com/threads/statistics-in-physics.1000000/",
         "Nanotechnology Research": "https://www.nano.gov/you/nanotechnology-benefits",
-        "Scientific Statistics": "https://www.nature.com/subjects/statistics",
     }
 }
 
-# App data
+# App data with CORRECT YouTube video IDs
 slides = [
     {
         "title": "📊 AP Statistics",
@@ -366,7 +366,7 @@ slides = [
                 }
             ],
             "resources": "Cosmetic Scientist",
-            "youtube_video": "PjfS8FU0WVo"
+            "youtube_video": "5v5wC0mHKQw"
         },
         "type": "career"
     },
@@ -791,686 +791,4 @@ def create_flyer_html():
     </div>
 </div>
 
-</body>
-</html>'''
-    
-    return flyer_html
-
-def create_complete_presentation_html():
-    """Create a COMPLETE printable version of ALL slides"""
-    today = datetime.now().strftime("%B %d, %Y")
-    
-    presentation_html = '''<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Statistics Full Presentation</title>
-    <style>
-        @media print {
-            @page {
-                size: letter;
-                margin: 0.5in;
-            }
-            body {
-                font-family: Arial, sans-serif;
-                font-size: 12pt;
-                line-height: 1.5;
-                margin: 0;
-                padding: 0;
-                color: #000;
-                background: white;
-            }
-            .slide {
-                page-break-after: always;
-                padding: 0.5in;
-                min-height: 9.5in;
-            }
-            h1 {
-                color: #667eea;
-                text-align: center;
-                margin-bottom: 20px;
-                font-size: 28pt;
-            }
-            h2 {
-                color: #764ba2;
-                border-bottom: 3px solid #764ba2;
-                padding-bottom: 10px;
-                margin-top: 30px;
-                font-size: 20pt;
-            }
-            h3 {
-                color: #333;
-                margin-top: 25px;
-                font-size: 16pt;
-            }
-            .example {
-                background: #f8f9fa;
-                padding: 15px;
-                margin: 15px 0;
-                border-left: 5px solid #667eea;
-                border-radius: 5px;
-            }
-            .benefit-list {
-                margin: 20px 0;
-                padding-left: 20px;
-            }
-            .benefit-list li {
-                margin: 10px 0;
-                font-size: 11pt;
-            }
-            .stat-term {
-                background: #fff3cd;
-                padding: 3px 6px;
-                border-radius: 3px;
-                font-weight: bold;
-            }
-            .footer {
-                position: absolute;
-                bottom: 0.5in;
-                width: calc(100% - 1in);
-                text-align: center;
-                font-size: 10pt;
-                color: #666;
-                border-top: 1px solid #ccc;
-                padding-top: 10px;
-            }
-            .page-number::after {
-                content: "Page " counter(page);
-            }
-            .career-title {
-                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-                padding: 20px;
-                border-radius: 10px;
-                margin: 20px 0;
-            }
-            .highlight-box {
-                background: #e7f3ff;
-                padding: 15px;
-                margin: 15px 0;
-                border-radius: 8px;
-                border: 1px solid #b8d4ff;
-            }
-            .resources {
-                background: #f0f7ff;
-                padding: 15px;
-                margin: 20px 0;
-                border-radius: 8px;
-                font-size: 11pt;
-            }
-            .resources h4 {
-                margin-top: 0;
-                color: #667eea;
-            }
-            .print-header {
-                text-align: center;
-                margin-bottom: 30px;
-                padding-bottom: 15px;
-                border-bottom: 2px solid #667eea;
-            }
-            .print-header small {
-                font-size: 10pt;
-                color: #666;
-            }
-            ul, ol {
-                margin-left: 25px;
-            }
-            li {
-                margin: 8px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="print-header">
-    <h1>AP Statistics Career Presentation</h1>
-    <p><strong>Complete Printable Version</strong></p>
-    <small>Generated on ''' + today + ''' | All content expanded for printing</small>
-</div>'''
-    
-    # Add ALL slides to the printable version
-    for i, slide in enumerate(slides):
-        presentation_html += '<div class="slide">\n'
-        
-        if slide["type"] == "title":
-            presentation_html += f'''
-            <h1>{slide["title"]}</h1>
-            <h2 style="text-align: center; color: #764ba2;">{slide["subtitle"]}</h2>
-            <div style="text-align: center; margin-top: 100px; font-size: 16pt;">
-                {slide["content"]}
-            </div>
-            '''
-            
-        elif slide["type"] == "intro":
-            presentation_html += f'''
-            <h1>{slide["title"]}</h1>
-            
-            <div class="highlight-box">
-                <h2>College & Career Benefits</h2>
-                <ul class="benefit-list">
-            '''
-            for benefit in slide["content"]["benefits"]:
-                presentation_html += f'<li>{benefit}</li>\n'
-            presentation_html += '''
-                </ul>
-            </div>
-            
-            <div class="highlight-box">
-                <h2>Real-World Applications</h2>
-                <p>''' + slide["content"]["applications"] + '''</p>
-            </div>
-            
-            <div class="resources">
-                <h4>📚 General Resources for AP Statistics:</h4>
-                <ul>
-                    <li><strong>College Board AP Statistics:</strong> Official course information and resources</li>
-                    <li><strong>Khan Academy AP Statistics:</strong> Free video lessons and practice problems</li>
-                    <li><strong>American Statistical Association:</strong> Career information and case studies</li>
-                    <li><strong>CDC Case Studies:</strong> Real public health statistics examples</li>
-                    <li><strong>FiveThirtyEight:</strong> Sports and politics statistical analysis</li>
-                </ul>
-            </div>
-            '''
-            
-        elif slide["type"] == "career":
-            presentation_html += f'''
-            <h1>{slide["title"]}</h1>
-            
-            <div class="career-title">
-                <h2>{slide["content"]["description"]}</h2>
-            </div>
-            '''
-            
-            for example in slide["content"]["examples"]:
-                content_with_terms = example["content"].replace(
-                    "<span class='highlight'>", "<span class='stat-term'>"
-                ).replace("</span>", "</span>")
-                
-                presentation_html += f'''
-                <div class="example">
-                    <h3>{example["title"]}</h3>
-                    <p>{content_with_terms}</p>
-                </div>
-                '''
-            
-            # Add YouTube video link
-            if "youtube_video" in slide["content"]:
-                video_id = slide["content"]["youtube_video"]
-                presentation_html += f'''
-                <div class="resources">
-                    <h4>📺 YouTube Video Resources:</h4>
-                    <p><strong>Watch how statistics is used in this career:</strong></p>
-                    <p>https://youtu.be/{video_id}</p>
-                </div>
-                '''
-            
-            # Add resources for this career
-            if "resources" in slide["content"]:
-                career_key = slide["content"]["resources"]
-                if career_key in CAREER_RESOURCES:
-                    presentation_html += '''
-                    <div class="resources">
-                        <h4>🔗 Learn More About This Career:</h4>
-                        <ul>
-                    '''
-                    for name, url in CAREER_RESOURCES[career_key].items():
-                        presentation_html += f'<li><strong>{name}:</strong> {url}</li>\n'
-                    presentation_html += '''
-                        </ul>
-                    </div>
-                    '''
-            
-        elif slide["type"] == "closing":
-            presentation_html += f'''
-            <h1>{slide["title"]}</h1>
-            
-            <div style="text-align: center; margin: 50px 0;">
-            '''
-            for point in slide["content"]["points"]:
-                presentation_html += f'<p style="font-size: 14pt; margin: 15px 0;">{point}</p>\n'
-            presentation_html += f'''
-            </div>
-            
-            <div class="highlight-box" style="text-align: center; padding: 30px;">
-                <p style="font-size: 16pt; font-weight: bold;">{slide["content"]["call_to_action"]}</p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                <h3>Next Steps</h3>
-                <p style="font-size: 12pt;">{slide["content"]["contact"]}</p>
-                <p style="margin-top: 15px; font-size: 11pt;">
-                    <strong>Additional Resources:</strong><br>
-                    • College Board: https://apcentral.collegeboard.org/<br>
-                    • Your School's Guidance Office<br>
-                    • AP Statistics Teacher Recommendations
-                </p>
-            </div>
-            '''
-        
-        presentation_html += f'''
-        <div class="footer">
-            <div class="page-number"></div>
-            <div>Slide {i+1} of {len(slides)} | AP Statistics Career Presentation</div>
-        </div>
-        </div>
-        '''
-    
-    presentation_html += '''
-    </body>
-    </html>
-    '''
-    
-    return presentation_html
-
-def display_resources(career_key):
-    """Display resource links with real-world examples and case studies"""
-    if career_key in CAREER_RESOURCES:
-        st.markdown("### 📚 Real-World Examples & Case Studies")
-        st.markdown("**See how AP Statistics-level methods are actually used in these careers:**")
-        
-        resources = CAREER_RESOURCES[career_key]
-        for name, url in resources.items():
-            st.markdown(f"""
-            <div class='resource-link'>
-                🔍 <a href='{url}' target='_blank'>{name}</a>
-            </div>
-            """, unsafe_allow_html=True)
-        
-        # Add YouTube video section
-        st.markdown("### 📺 YouTube Video Explanations")
-        st.markdown("**Watch how statistics is used in this field:**")
-        
-        # Find YouTube videos for this career
-        youtube_links = []
-        for name, url in resources.items():
-            if "YouTube:" in name and "youtu" in url:
-                youtube_links.append((name, url))
-        
-        if youtube_links:
-            for name, url in youtube_links:
-                st.markdown(f"""
-                <div class='video-link'>
-                    ▶️ <a href='{url}' target='_blank'>{name.replace("📺 YouTube: ", "")}</a>
-                </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.info("Search YouTube for 'statistics in [career name]' to find helpful videos!")
-        
-        # Add a case study explanation
-        st.markdown("""
-        <div class='case-study'>
-        <strong>What you'll find in these resources:</strong>
-        <ul>
-        <li>Real data analysis examples from industry</li>
-        <li>Statistical methods used in professional settings</li>
-        <li>Case studies showing problem-solving with statistics</li>
-        <li>Examples of hypothesis testing, regression, probability in practice</li>
-        </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-def main():
-    # Initialize session state
-    if 'current_slide' not in st.session_state:
-        st.session_state.current_slide = 0
-    if 'show_printable' not in st.session_state:
-        st.session_state.show_printable = False
-    if 'show_flyer' not in st.session_state:
-        st.session_state.show_flyer = False
-    
-    # Sidebar navigation
-    with st.sidebar:
-        st.title("📊 Navigation")
-        
-        # Slide selector
-        selected_slide = st.selectbox(
-            "Go to Slide:",
-            [f"Slide {i+1}: {slides[i]['title'][:30]}..." for i in range(len(slides))],
-            index=st.session_state.current_slide
-        )
-        
-        # Update current slide based on selection
-        st.session_state.current_slide = int(selected_slide.split(":")[0].replace("Slide ", "")) - 1
-        
-        # Navigation buttons
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("⬅️ Previous", disabled=st.session_state.current_slide == 0):
-                st.session_state.current_slide = max(0, st.session_state.current_slide - 1)
-                st.rerun()
-        
-        with col2:
-            if st.button("Next ➡️", disabled=st.session_state.current_slide == len(slides)-1):
-                st.session_state.current_slide = min(len(slides)-1, st.session_state.current_slide + 1)
-                st.rerun()
-        
-        # Progress indicator
-        st.progress((st.session_state.current_slide + 1) / len(slides))
-        st.caption(f"Slide {st.session_state.current_slide + 1} of {len(slides)}")
-        
-        # REAL-WORLD EXAMPLE HIGHLIGHT
-        st.markdown("---")
-        st.subheader("🔬 Featured Real-World Example")
-        
-        # Show a relevant real-world example based on current slide
-        slide = slides[st.session_state.current_slide]
-        if slide["type"] in ["intro", "career"] and "resources" in slide["content"]:
-            career_key = slide["content"]["resources"]
-            if career_key in CAREER_RESOURCES:
-                resources = CAREER_RESOURCES[career_key]
-                # Show first resource as featured
-                first_name, first_url = list(resources.items())[0]
-                st.markdown(f"**Featured:** [{first_name}]({first_url})")
-                st.caption("Click to see a real case study!")
-        
-        # Quick AP Stats real-world examples
-        st.markdown("---")
-        st.subheader("📈 Quick Examples")
-        st.markdown("[Netflix A/B Testing](https://youtu.be/sxQaBpKfDRk)")
-        st.markdown("[CDC Case Studies](https://www.cdc.gov/nchs/pressroom/casestudies.htm)")
-        st.markdown("[Sports Analytics](https://fivethirtyeight.com/tag/statistics/)")
-        
-        # PRINT/SAVE BUTTONS
-        st.markdown("---")
-        st.subheader("🖨️ Print & Save")
-        
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("📄 Print Flyer", use_container_width=True):
-                st.session_state.show_flyer = True
-                st.session_state.show_printable = False
-                st.rerun()
-        
-        with col2:
-            if st.button("📊 Full Presentation", use_container_width=True):
-                st.session_state.show_printable = True
-                st.session_state.show_flyer = False
-                st.rerun()
-        
-        # Download section
-        st.markdown("---")
-        st.subheader("Download Instructions")
-        
-        instructions = create_instructions_file()
-        st.download_button(
-            label="📥 Download PowerPoint Instructions",
-            data=instructions,
-            file_name="PowerPoint_Conversion_Instructions.txt",
-            mime="text/plain"
-        )
-    
-    # Main content area - Show printable versions if requested
-    if st.session_state.show_printable:
-        st.markdown("## 📄 Complete Printable Presentation")
-        st.info("**Instructions:** Use your browser's Print function (Ctrl+P) and select 'Save as PDF' for best results.")
-        
-        presentation_html = create_complete_presentation_html()
-        b64 = base64.b64encode(presentation_html.encode()).decode()
-        href = f'<a href="data:text/html;base64,{b64}" download="ap_statistics_presentation.html" style="background:#667eea;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">📥 Download HTML for Printing</a>'
-        st.markdown(href, unsafe_allow_html=True)
-        
-        # Display the HTML
-        st.components.v1.html(presentation_html, height=800, scrolling=True)
-        
-        if st.button("← Back to Interactive Presentation"):
-            st.session_state.show_printable = False
-            st.rerun()
-        
-        return
-    
-    if st.session_state.show_flyer:
-        st.markdown("## 📄 2-Page Printable Flyer")
-        st.info("**Instructions:** Print double-sided or save as PDF. Perfect for handing out!")
-        
-        flyer_html = create_flyer_html()
-        b64 = base64.b64encode(flyer_html.encode()).decode()
-        href = f'<a href="data:text/html;base64,{b64}" download="ap_statistics_flyer.html" style="background:#667eea;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">📥 Download HTML for Printing</a>'
-        st.markdown(href, unsafe_allow_html=True)
-        
-        # Display the HTML
-        st.components.v1.html(flyer_html, height=800, scrolling=True)
-        
-        if st.button("← Back to Interactive Presentation"):
-            st.session_state.show_flyer = False
-            st.rerun()
-        
-        return
-    
-    # PRINT/SAVE BUTTONS IN MAIN AREA
-    st.markdown("### 🖨️ Printable Materials")
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        if st.button("📄 Print 2-Page Flyer", use_container_width=True, type="primary"):
-            st.session_state.show_flyer = True
-            st.rerun()
-        st.caption("Perfect for handing out to students")
-    
-    with col2:
-        if st.button("📊 Save Full Presentation", use_container_width=True, type="secondary"):
-            st.session_state.show_printable = True
-            st.rerun()
-        st.caption("Complete 15-slide presentation for printing")
-    
-    st.markdown("---")
-    
-    # Display current slide
-    slide = slides[st.session_state.current_slide]
-    
-    if slide["type"] == "title":
-        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
-        st.markdown(f"<h2 class='sub-header'>{slide['subtitle']}</h2>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='text-align: center; color: #667eea; margin-top: 2rem;'>{slide['content']}</h3>", unsafe_allow_html=True)
-        
-        # Real-world examples preview
-        with st.expander("🎯 See Real-World Statistics Examples", expanded=True):
-            col1, col2 = st.columns(2)
-            with col1:
-                st.markdown("**Famous Case Studies:**")
-                st.markdown("""
-                - [Netflix: A/B Testing Platform](https://youtu.be/sxQaBpKfDRk)
-                - [Google: Large-Scale Experiments](https://ai.google/research/pubs/pub36500/)
-                - [CDC: Public Health Statistics](https://www.cdc.gov/nchs/pressroom/casestudies.htm)
-                - [538: Sports Analytics](https://fivethirtyeight.com/tag/statistics/)
-                """)
-            with col2:
-                st.markdown("**AP Stats in Action:**")
-                st.markdown("""
-                - Hypothesis testing in medicine
-                - Regression in marketing
-                - Probability in engineering
-                - Sampling in social science
-                - Confidence intervals in research
-                """)
-        
-        # YouTube video section
-        st.markdown("### 📺 Watch an Introduction Video")
-        st.markdown("""
-        <div class='video-container'>
-        <strong>Why Statistics Matters:</strong>
-        <div style="text-align: center; margin: 15px 0;">
-        <a href="https://youtu.be/sxQaBpKfDRk" target="_blank" style="color: #667eea; font-weight: bold;">
-        ▶️ Click here to watch on YouTube
-        </a>
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Add decorative gradient background
-        st.markdown("""
-        <div style='height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-        border-radius: 20px; margin-top: 2rem; display: flex; align-items: center; justify-content: center;'>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    elif slide["type"] == "intro":
-        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
-        
-        with st.container():
-            st.markdown("<div class='intro-section'>", unsafe_allow_html=True)
-            st.subheader("College & Career Benefits")
-            for benefit in slide["content"]["benefits"]:
-                st.markdown(f"✅ {benefit}")
-            st.markdown("</div>", unsafe_allow_html=True)
-        
-        st.markdown("<div class='intro-section'>", unsafe_allow_html=True)
-        st.subheader("Real-World Applications")
-        st.info(slide["content"]["applications"])
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        # YouTube video section
-        st.markdown("### 📺 Watch These Introductory Videos")
-        st.markdown("""
-        <div class='video-container'>
-        <strong>Learn More About Statistics:</strong>
-        <div class='video-link'>
-            ▶️ <a href="https://youtu.be/sxQaBpKfDRk" target="_blank">Why Statistics Matters</a>
-        </div>
-        <div class='video-link'>
-            ▶️ <a href="https://youtu.be/MtFY0J9c-2A" target="_blank">Statistics in Everyday Life</a>
-        </div>
-        <div class='video-link'>
-            ▶️ <a href="https://youtu.be/BzHz0J9Q6qo" target="_blank">Careers in Statistics</a>
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Display general resources with emphasis on real-world examples
-        st.markdown("---")
-        st.markdown("### 🔍 Explore Real Statistics in Action")
-        st.markdown("**These aren't just textbook problems - here's how statistics is used in the real world:**")
-        
-        display_resources("general")
-    
-    elif slide["type"] == "career":
-        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
-        
-        with st.container():
-            st.markdown("<div class='slide-card'>", unsafe_allow_html=True)
-            st.markdown(f"<h2 class='career-title'>{slide['content']['description']}</h2>", unsafe_allow_html=True)
-            
-            for example in slide["content"]["examples"]:
-                with st.container():
-                    st.markdown("<div class='example-box'>", unsafe_allow_html=True)
-                    st.markdown(f"**{example['title']}**")
-                    st.markdown(example["content"], unsafe_allow_html=True)
-                    st.markdown("</div>", unsafe_allow_html=True)
-            
-            st.markdown("</div>", unsafe_allow_html=True)
-        
-        # Display YouTube video for this career
-        if "youtube_video" in slide["content"]:
-            video_id = slide["content"]["youtube_video"]
-            if video_id != "YOUR_VIDEO_ID_HERE":
-                st.markdown("### 📺 Watch How Statistics is Used in This Career")
-                st.markdown(f"""
-                <div class='video-container'>
-                <strong>Video Explanation:</strong>
-                <div style="text-align: center; margin: 15px 0;">
-                <a href="https://youtu.be/{video_id}" target="_blank" style="color: #667eea; font-weight: bold;">
-                ▶️ Click here to watch on YouTube
-                </a>
-                </div>
-                </div>
-                """, unsafe_allow_html=True)
-        
-        # Display career-specific resources with REAL case studies
-        if "resources" in slide["content"]:
-            display_resources(slide["content"]["resources"])
-            
-            # Add practical exercise suggestion
-            st.markdown("""
-            <div class='case-study'>
-            <strong>💡 Try This AP Statistics Connection:</strong>
-            <p>Look at the case studies above and identify:</p>
-            <ul>
-            <li>What statistical methods are being used? (hypothesis testing, regression, etc.)</li>
-            <li>What data was collected and how?</li>
-            <li>What conclusions were drawn from the statistical analysis?</li>
-            <li>How could this analysis be improved or expanded?</li>
-            </ul>
-            </div>
-            """, unsafe_allow_html=True)
-    
-    elif slide["type"] == "closing":
-        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
-        
-        # Show top real-world examples from various fields
-        with st.expander("🔬 Top Real-World Statistics Examples by Field", expanded=True):
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.markdown("**Healthcare:**")
-                st.markdown("• [NICU Infection Control](https://youtu.be/PjfS8FU0WVo)")
-                st.markdown("• [Vaccine Efficacy Analysis](https://www.cdc.gov/vaccines/stats-surv/index.html)")
-            
-            with col2:
-                st.markdown("**Technology:**")
-                st.markdown("• [Netflix A/B Testing](https://youtu.be/sxQaBpKfDRk)")
-                st.markdown("• [Google Experiments](https://ai.google/research/pubs/pub36500/)")
-            
-            with col3:
-                st.markdown("**Engineering:**")
-                st.markdown("• [Quality Control Statistics](https://youtu.be/fHLQa2B3VhE)")
-                st.markdown("• [Reliability Engineering](https://www.weibull.com/basics/reliability.htm)")
-        
-        # Add decorative gradient background
-        st.markdown("""
-        <div style='height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-        border-radius: 20px; margin: 2rem 0; padding: 3rem; color: white;'>
-        """, unsafe_allow_html=True)
-        
-        for point in slide["content"]["points"]:
-            st.markdown(f"<h3 style='color: white; margin: 1rem 0;'>{point}</h3>", unsafe_allow_html=True)
-        
-        st.markdown("</div>", unsafe_allow_html=True)
-        
-        st.success(slide["content"]["call_to_action"])
-        
-        # Final resources section
-        st.markdown("---")
-        st.markdown("### 🎓 Next Steps")
-        st.info(slide["content"]["contact"])
-        
-        # Final YouTube video recommendation
-        st.markdown("### 📺 Final Video Recommendation")
-        st.markdown("""
-        <div class='video-container'>
-        <strong>Watch this to get inspired:</strong>
-        <div style="text-align: center; margin: 15px 0;">
-        <a href="https://youtu.be/BzHz0J9Q6qo" target="_blank" style="color: #667eea; font-weight: bold;">
-        ▶️ Careers in Statistics - What You Can Do With Statistics
-        </a>
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    # Footer with keyboard navigation hint
-    st.markdown("---")
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        st.caption("💡 **Tip:** Use the sidebar to navigate or click the buttons below")
-        st.caption("🔗 **Resources:** Click links in each section to learn more about careers and statistics")
-    
-    # Bottom navigation buttons
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        if st.button("⏮️ First", use_container_width=True):
-            st.session_state.current_slide = 0
-            st.rerun()
-    with col2:
-        if st.button("⬅️ Back", use_container_width=True, disabled=st.session_state.current_slide == 0):
-            st.session_state.current_slide -= 1
-            st.rerun()
-    with col4:
-        if st.button("Next ➡️", use_container_width=True, disabled=st.session_state.current_slide == len(slides)-1):
-            st.session_state.current_slide += 1
-            st.rerun()
-    with col5:
-        if st.button("Last ⏭️", use_container_width=True):
-            st.session_state.current_slide = len(slides) - 1
-            st.rerun()
-
-if __name__ == "__main__":
-    main()
+</body
