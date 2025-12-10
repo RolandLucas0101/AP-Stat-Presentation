@@ -183,8 +183,8 @@ CAREER_RESOURCES = {
         "Security Metrics Guide": "https://csrc.nist.gov/projects/security-metrics",
     },
     "Cosmetic Scientist": {
-        "📺 YouTube: Statistics in Cosmetics": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
-        "📺 YouTube: Product Testing Methods": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
+        "📺 YouTube: Statistics in Product Testing": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
+        "📺 YouTube: Consumer Research Methods": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
         "Cosmetic Science Statistics": "https://www.personalcarecouncil.org/science/statistics/",
         "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
         "Consumer Research Statistics": "https://www.quirks.com/articles/category/statistics",
@@ -231,18 +231,6 @@ CAREER_RESOURCES = {
         "Nanotechnology Research": "https://www.nano.gov/you/nanotechnology-benefits",
         "Scientific Statistics": "https://www.nature.com/subjects/statistics",
     }
-}
-
-# YouTube video placeholders - replace with actual working video IDs
-YOUTUBE_VIDEOS = {
-    "general_intro": "sxQaBpKfDRk",  # Why Statistics Matters
-    "healthcare": "PjfS8FU0WVo",     # Statistics in Nursing
-    "marketing": "JRzCJ3NEPcE",      # Statistics in Marketing
-    "medicine": "9wVxH7dCq-c",       # Statistics in Medicine
-    "engineering": "tKdGgH0oygw",    # Statistics in Engineering
-    "cybersecurity": "8tqHOVD8gH4",  # Statistics in Cybersecurity
-    "software": "fZ3C2gDTtYQ",       # Statistics in Software
-    "science": "sGBLgRwLw-o",        # Statistics in Science
 }
 
 # App data
@@ -378,7 +366,7 @@ slides = [
                 }
             ],
             "resources": "Cosmetic Scientist",
-            "youtube_video": "PjfS8FU0WVo"  # Using nursing video as placeholder
+            "youtube_video": "PjfS8FU0WVo"
         },
         "type": "career"
     },
@@ -553,246 +541,273 @@ def create_flyer_html():
     """Create a two-page flyer summary (front and back) as HTML"""
     today = datetime.now().strftime("%B %d, %Y")
     
-    flyer_html = f'''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AP Statistics Flyer</title>
-        <style>
-            @media print {{
-                @page {{
-                    size: letter;
-                    margin: 0.5in;
-                }}
-                body {{
-                    font-family: Arial, sans-serif;
-                    font-size: 11pt;
-                    line-height: 1.4;
-                    margin: 0;
-                    padding: 0;
-                    color: #000;
-                }}
-                .page {{
-                    page-break-after: always;
-                    padding: 0.5in;
-                    min-height: 9in;
-                }}
-                .page-break {{
-                    page-break-before: always;
-                }}
-                h1 {{
-                    color: #667eea;
-                    text-align: center;
-                    margin-bottom: 10px;
-                    font-size: 24pt;
-                }}
-                h2 {{
-                    color: #764ba2;
-                    border-bottom: 2px solid #764ba2;
-                    padding-bottom: 5px;
-                    font-size: 16pt;
-                }}
-                .highlight {{
-                    background-color: #fff3cd;
-                    padding: 2px 4px;
-                    border-radius: 3px;
-                }}
-                .section {{
-                    margin: 15px 0;
-                    padding: 15px;
-                    background: #f8f9fa;
-                    border-radius: 5px;
-                    border: 1px solid #dee2e6;
-                }}
-                .career-grid {{
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 10px;
-                    margin: 15px 0;
-                }}
-                .career-item {{
-                    padding: 10px;
-                    background: white;
-                    border: 1px solid #dee2e6;
-                    border-radius: 4px;
-                    font-size: 10pt;
-                }}
-                .stat-method {{
-                    background: #e7f3ff;
-                    padding: 8px;
-                    margin: 5px 0;
-                    border-left: 3px solid #667eea;
-                    font-size: 10pt;
-                }}
-                .contact-info {{
-                    text-align: center;
-                    margin-top: 30px;
-                    font-size: 10pt;
-                    padding-top: 15px;
-                    border-top: 2px solid #ccc;
-                }}
-                ul, ol {{
-                    margin-left: 20px;
-                }}
-                li {{
-                    margin: 8px 0;
-                }}
+    flyer_html = f'''<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Statistics Flyer</title>
+    <style>
+        @media print {{
+            @page {{
+                size: letter;
+                margin: 0.5in;
             }}
-        </style>
-    </head>
-    <body>
+            body {{
+                font-family: Arial, sans-serif;
+                font-size: 11pt;
+                line-height: 1.4;
+                margin: 0;
+                padding: 0;
+                color: #000;
+            }}
+            .page {{
+                page-break-after: always;
+                padding: 0.5in;
+                min-height: 9in;
+            }}
+            .page-break {{
+                page-break-before: always;
+            }}
+            h1 {{
+                color: #667eea;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 24pt;
+            }}
+            h2 {{
+                color: #764ba2;
+                border-bottom: 2px solid #764ba2;
+                padding-bottom: 5px;
+                font-size: 16pt;
+            }}
+            .highlight {{
+                background-color: #fff3cd;
+                padding: 2px 4px;
+                border-radius: 3px;
+            }}
+            .section {{
+                margin: 15px 0;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 5px;
+                border: 1px solid #dee2e6;
+            }}
+            .career-grid {{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 15px 0;
+            }}
+            .career-item {{
+                padding: 10px;
+                background: white;
+                border: 1px solid #dee2e6;
+                border-radius: 4px;
+                font-size: 10pt;
+            }}
+            .stat-method {{
+                background: #e7f3ff;
+                padding: 8px;
+                margin: 5px 0;
+                border-left: 3px solid #667eea;
+                font-size: 10pt;
+            }}
+            .contact-info {{
+                text-align: center;
+                margin-top: 30px;
+                font-size: 10pt;
+                padding-top: 15px;
+                border-top: 2px solid #ccc;
+            }}
+            ul, ol {{
+                margin-left: 20px;
+            }}
+            li {{
+                margin: 8px 0;
+            }}
+        }}
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 (FRONT) -->
+<div class="page">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1>📊 AP Statistics</h1>
+        <h2>Your Gateway to Career Success</h2>
+        <p style="font-weight: bold; font-size: 12pt;">Why Juniors Should Take AP Stats Senior Year</p>
+        <p style="font-size: 10pt; color: #666;">{today}</p>
+    </div>
     
-    <!-- PAGE 1 (FRONT) -->
-    <div class="page">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1>📊 AP Statistics</h1>
-            <h2>Your Gateway to Career Success</h2>
-            <p style="font-weight: bold; font-size: 12pt;">Why Juniors Should Take AP Stats Senior Year</p>
-            <p style="font-size: 10pt; color: #666;">{today}</p>
-        </div>
-        
-        <div class="section">
-            <h2>🚀 Key Benefits of AP Statistics</h2>
-            <ul>
-                <li><strong>College Credit:</strong> Earn credits and save thousands in tuition</li>
-                <li><strong>College Admissions:</strong> Stand out in competitive applications</li>
-                <li><strong>Career Preparation:</strong> Required for most STEM and business majors</li>
-                <li><strong>Real-World Skills:</strong> Data analysis, critical thinking, problem-solving</li>
-                <li><strong>Versatility:</strong> Applies to healthcare, tech, engineering, business, and more</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>🎯 AP Statistics in Real Careers</h2>
-            <div class="career-grid">
-                <div class="career-item">
-                    <strong style="color: #667eea;">🏥 NICU Nurse</strong><br>
-                    • Vital sign statistical analysis<br>
-                    • Treatment effectiveness testing<br>
-                    • Infection control statistics
-                </div>
-                <div class="career-item">
-                    <strong style="color: #667eea;">📈 Marketing Professional</strong><br>
-                    • A/B testing campaigns<br>
-                    • Customer segmentation analysis<br>
-                    • ROI statistical analysis
-                </div>
-                <div class="career-item">
-                    <strong style="color: #667eea;">⚕️ Pediatric Surgeon</strong><br>
-                    • Surgical risk probability<br>
-                    • Outcome prediction models<br>
-                    • Clinical trial statistics
-                </div>
-                <div class="career-item">
-                    <strong style="color: #667eea;">🔒 Cybersecurity</strong><br>
-                    • Anomaly detection algorithms<br>
-                    • Threat probability modeling<br>
-                    • Risk statistical analysis
-                </div>
+    <div class="section">
+        <h2>🚀 Key Benefits of AP Statistics</h2>
+        <ul>
+            <li><strong>College Credit:</strong> Earn credits and save thousands in tuition</li>
+            <li><strong>College Admissions:</strong> Stand out in competitive applications</li>
+            <li><strong>Career Preparation:</strong> Required for most STEM and business majors</li>
+            <li><strong>Real-World Skills:</strong> Data analysis, critical thinking, problem-solving</li>
+            <li><strong>Versatility:</strong> Applies to healthcare, tech, engineering, business, and more</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🎯 AP Statistics in Real Careers</h2>
+        <div class="career-grid">
+            <div class="career-item">
+                <strong style="color: #667eea;">🏥 NICU Nurse</strong><br>
+                • Vital sign statistical analysis<br>
+                • Treatment effectiveness testing<br>
+                • Infection control statistics
             </div>
-        </div>
-        
-        <div class="section">
-            <h2>📚 AP Stats Methods You''ll Learn</h2>
-            <div class="stat-method"><strong>Hypothesis Testing:</strong> Test ideas with data</div>
-            <div class="stat-method"><strong>Regression Analysis:</strong> Find relationships between variables</div>
-            <div class="stat-method"><strong>Probability Distributions:</strong> Model uncertainty</div>
-            <div class="stat-method"><strong>Confidence Intervals:</strong> Estimate with precision</div>
-            <div class="stat-method"><strong>Sampling Methods:</strong> Study populations efficiently</div>
-            <div class="stat-method"><strong>Experimental Design:</strong> Design valid studies</div>
-        </div>
-        
-        <div class="contact-info">
-            <p><strong>Questions?</strong> Talk to your guidance counselor about registering for AP Statistics!</p>
+            <div class="career-item">
+                <strong style="color: #667eea;">📈 Marketing Professional</strong><br>
+                • A/B testing campaigns<br>
+                • Customer segmentation analysis<br>
+                • ROI statistical analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #667eea;">⚕️ Pediatric Surgeon</strong><br>
+                • Surgical risk probability<br>
+                • Outcome prediction models<br>
+                • Clinical trial statistics
+            </div>
+            <div class="career-item">
+                <strong style="color: #667eea;">🔒 Cybersecurity</strong><br>
+                • Anomaly detection algorithms<br>
+                • Threat probability modeling<br>
+                • Risk statistical analysis
+            </div>
         </div>
     </div>
     
-    <!-- PAGE 2 (BACK) -->
-    <div class="page page-break">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1 style="color: #764ba2;">AP Statistics Career Connections</h1>
-        </div>
-        
-        <div class="section">
-            <h2>💡 More Career Examples</h2>
-            <div class="career-grid">
-                <div class="career-item">
-                    <strong style="color: #764ba2;">🧪 Cosmetic Scientist</strong><br>
-                    • Product testing statistics<br>
-                    • Formulation optimization<br>
-                    • Consumer research analysis
-                </div>
-                <div class="career-item">
-                    <strong style="color: #764ba2;">⚡ Electrical Engineer</strong><br>
-                    • Quality control statistics<br>
-                    • Reliability testing<br>
-                    • Circuit failure analysis
-                </div>
-                <div class="career-item">
-                    <strong style="color: #764ba2;">🏗️ Civil Engineer</strong><br>
-                    • Structural safety factors<br>
-                    • Material strength testing<br>
-                    • Load probability analysis
-                </div>
-                <div class="career-item">
-                    <strong style="color: #764ba2;">💻 Software Developer</strong><br>
-                    • A/B feature testing<br>
-                    • Algorithm optimization<br>
-                    • Performance metrics analysis
-                </div>
+    <div class="section">
+        <h2>📚 AP Stats Methods You'll Learn</h2>
+        <div class="stat-method"><strong>Hypothesis Testing:</strong> Test ideas with data</div>
+        <div class="stat-method"><strong>Regression Analysis:</strong> Find relationships between variables</div>
+        <div class="stat-method"><strong>Probability Distributions:</strong> Model uncertainty</div>
+        <div class="stat-method"><strong>Confidence Intervals:</strong> Estimate with precision</div>
+        <div class="stat-method"><strong>Sampling Methods:</strong> Study populations efficiently</div>
+        <div class="stat-method"><strong>Experimental Design:</strong> Design valid studies</div>
+    </div>
+    
+    <div class="contact-info">
+        <p><strong>Questions?</strong> Talk to your guidance counselor about registering for AP Statistics!</p>
+    </div>
+</div>
+
+<!-- PAGE 2 (BACK) -->
+<div class="page page-break">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #764ba2;">AP Statistics Career Connections</h1>
+    </div>
+    
+    <div class="section">
+        <h2>💡 More Career Examples</h2>
+        <div class="career-grid">
+            <div class="career-item">
+                <strong style="color: #764ba2;">🧪 Cosmetic Scientist</strong><br>
+                • Product testing statistics<br>
+                • Formulation optimization<br>
+                • Consumer research analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">⚡ Electrical Engineer</strong><br>
+                • Quality control statistics<br>
+                • Reliability testing<br>
+                • Circuit failure analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">🏗️ Civil Engineer</strong><br>
+                • Structural safety factors<br>
+                • Material strength testing<br>
+                • Load probability analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">💻 Software Developer</strong><br>
+                • A/B feature testing<br>
+                • Algorithm optimization<br>
+                • Performance metrics analysis
             </div>
         </div>
-        
-        <div class="section">
-            <h2>🔗 Real-World Case Studies</h2>
-            <p>Statistics in action across industries:</p>
-            <ul>
-                <li><strong>Netflix:</strong> A/B testing thousands of interface designs</li>
-                <li><strong>CDC:</strong> Tracking disease outbreaks with statistics</li>
-                <li><strong>Google:</strong> Analyzing search patterns and user behavior</li>
-                <li><strong>Hospitals:</strong> Reducing infection rates with statistical process control</li>
-                <li><strong>Manufacturing:</strong> Ensuring quality through statistical sampling</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>🎓 College Majors That Require Statistics</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                <div>
-                    <ul>
-                        <li>All Engineering fields</li>
-                        <li>Business & Economics</li>
-                        <li>Psychology & Sociology</li>
-                        <li>Biology & Chemistry</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>Computer Science</li>
-                        <li>Data Science</li>
-                        <li>Environmental Science</li>
-                        <li>Public Health</li>
-                    </ul>
-                </div>
+    </div>
+    
+    <div class="section">
+        <h2>🔗 Real-World Case Studies</h2>
+        <p>Statistics in action across industries:</p>
+        <ul>
+            <li><strong>Netflix:</strong> A/B testing thousands of interface designs</li>
+            <li><strong>CDC:</strong> Tracking disease outbreaks with statistics</li>
+            <li><strong>Google:</strong> Analyzing search patterns and user behavior</li>
+            <li><strong>Hospitals:</strong> Reducing infection rates with statistical process control</li>
+            <li><strong>Manufacturing:</strong> Ensuring quality through statistical sampling</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🎓 College Majors That Require Statistics</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <div>
+                <ul>
+                    <li>All Engineering fields</li>
+                    <li>Business & Economics</li>
+                    <li>Psychology & Sociology</li>
+                    <li>Biology & Chemistry</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Computer Science</li>
+                    <li>Data Science</li>
+                    <li>Environmental Science</li>
+                    <li>Public Health</li>
+                </ul>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>📞 Take Action Today!</h2>
-            <p><strong>Steps to Register for AP Statistics:</strong></p>
-            <ol>
-                <li>Talk to your current math teacher about your readiness</li>
-                <li>Visit your guidance counselor for scheduling</li>
-                <li>Check your school''s AP course offerings and deadlines</li>
-                <li>Discuss the benefits with parents/guardians</li>
-                <li>Register before the course selection deadline</li>
-            </ol>
-        </div>
-        
-        <div class="contact-info">
-            <p style="font-size: 12pt; font-weight: bold; color: #667eea;">
-            Your future career starts with the decisions you make today!
-            </p>
-            <
+    </div>
+    
+    <div class="section">
+        <h2>📞 Take Action Today!</h2>
+        <p><strong>Steps to Register for AP Statistics:</strong></p>
+        <ol>
+            <li>Talk to your current math teacher about your readiness</li>
+            <li>Visit your guidance counselor for scheduling</li>
+            <li>Check your school's AP course offerings and deadlines</li>
+            <li>Discuss the benefits with parents/guardians</li>
+            <li>Register before the course selection deadline</li>
+        </ol>
+    </div>
+    
+    <div class="contact-info">
+        <p style="font-size: 12pt; font-weight: bold; color: #667eea;">
+        Your future career starts with the decisions you make today!
+        </p>
+        <p style="font-style: italic; margin-top: 10px;">
+        "In God we trust, all others must bring data." - W. Edwards Deming
+        </p>
+        <p style="font-size: 9pt; margin-top: 20px; color: #666;">
+        Print and share this flyer! | Interactive version available online
+        </p>
+    </div>
+</div>
+
+</body>
+</html>'''
+    
+    return flyer_html
+
+def create_complete_presentation_html():
+    """Create a COMPLETE printable version of ALL slides"""
+    today = datetime.now().strftime("%B %d, %Y")
+    
+    presentation_html = '''<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Statistics Full Presentation</title>
+    <style>
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.
