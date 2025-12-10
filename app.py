@@ -183,8 +183,8 @@ CAREER_RESOURCES = {
         "Security Metrics Guide": "https://csrc.nist.gov/projects/security-metrics",
     },
     "Cosmetic Scientist": {
-        "📺 YouTube: Statistics in Product Testing": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
-        "📺 YouTube: Consumer Research Methods": "https://youtu.be/YOUR_VIDEO_ID_HERE",  # Placeholder
+        "📺 YouTube: Statistics in Product Testing": "https://youtu.be/YOUR_VIDEO_ID_HERE",
+        "📺 YouTube: Consumer Research Methods": "https://youtu.be/YOUR_VIDEO_ID_HERE",
         "Cosmetic Science Statistics": "https://www.personalcarecouncil.org/science/statistics/",
         "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
         "Consumer Research Statistics": "https://www.quirks.com/articles/category/statistics",
@@ -810,4 +810,7 @@ def create_complete_presentation_html():
         @media print {
             @page {
                 size: letter;
-                margin: 0.
+                margin: 0.5in;
+            }
+            body {
+               
