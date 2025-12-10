@@ -91,93 +91,101 @@ st.markdown("""
     .resource-link a:hover {
         text-decoration: underline;
     }
+    
+    .case-study {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+        border: 1px solid #dee2e6;
+    }
 </style>
 """, unsafe_allow_html=True)
 
-# Career Resources Data
+# Updated Career Resources with REAL-WORLD EXAMPLES and CASE STUDIES
 CAREER_RESOURCES = {
     "general": {
-        "College Board AP Statistics": "https://apcentral.collegeboard.org/courses/ap-statistics",
-        "American Statistical Association": "https://www.amstat.org/",
-        "Khan Academy Statistics": "https://www.khanacademy.org/math/statistics-probability",
-        "Stat Trek Statistics Tutorials": "https://stattrek.com/",
-        "Bureau of Labor Statistics": "https://www.bls.gov/ooh/math/statisticians.htm",
+        "Case Study: How Netflix Uses Statistics": "https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15",
+        "Real-World Statistics in Sports Analytics": "https://fivethirtyeight.com/features/how-our-2020-nfl-predictions-work/",
+        "Statistics in Public Policy Decision-Making": "https://www.cdc.gov/nchs/pressroom/casestudies.htm",
+        "AP Statistics Real-World Applications": "https://apcentral.collegeboard.org/courses/ap-statistics/classroom-resources/real-world-applications",
+        "Statistics in Everyday Life - Case Studies": "https://www.amstat.org/asa/files/pdfs/edu-case-studies.pdf",
     },
     "NICU Nurse": {
-        "Nursing Statistics Resources": "https://www.nursingworld.org/practice-policy/workforce/what-is-nursing/",
-        "Neonatal Nursing Info": "https://nann.org/education/what-is-neonatal-nursing",
-        "Healthcare Data Analysis": "https://www.cdc.gov/nchs/index.htm",
-        "Evidence-Based Nursing": "https://www.ebn.bmj.com/",
+        "Case Study: Statistical Analysis of Premature Infant Outcomes": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4481523/",
+        "Real Example: Using Control Charts in NICU Infection Prevention": "https://www.jstor.org/stable/10.1086/664772",
+        "Statistical Methods for Neonatal Risk Assessment": "https://www.sciencedirect.com/science/article/pii/S002234761730555X",
+        "AP Stats-Level Study: Temperature Monitoring in Preterm Infants": "https://pubmed.ncbi.nlm.nih.gov/29279822/",
     },
     "Marketing Professional": {
-        "Marketing Analytics Resources": "https://www.ama.org/marketing-analytics/",
-        "Digital Marketing Statistics": "https://www.thinkwithgoogle.com/",
-        "Consumer Behavior Research": "https://www.acrwebsite.org/",
-        "Data-Driven Marketing": "https://www.marketingprofs.com/charts/category/18/data-driven-marketing",
+        "Case Study: A/B Testing at Booking.com (10,000+ tests)": "https://booking.ai/ab-testing-at-booking-com-8c6b7a420a79",
+        "Real Example: Regression Analysis for Ad Spend Optimization": "https://hbr.org/2014/10/a-refresher-on-regression-analysis",
+        "Statistics in Digital Marketing - Facebook Case Study": "https://www.facebook.com/business/success/",
+        "AP Stats Application: Customer Segmentation Analysis": "https://towardsdatascience.com/customer-segmentation-using-k-means-clustering-d33964f238c3",
     },
     "Pediatric Surgeon": {
-        "Surgical Statistics": "https://www.facs.org/",
-        "Pediatric Surgery Resources": "https://www.pedsurglibrary.com/",
-        "Medical Research Statistics": "https://www.nih.gov/",
-        "Clinical Trial Analysis": "https://clinicaltrials.gov/",
+        "Case Study: Statistical Analysis of Appendectomy Outcomes": "https://jamanetwork.com/journals/jamasurgery/fullarticle/2760744",
+        "Real Example: Survival Analysis in Pediatric Cancer Surgery": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082075/",
+        "Probability in Surgical Risk Calculators": "https://riskcalculator.facs.org/RiskCalculator/",
+        "AP Stats-Level Study: Complication Rates by Surgical Technique": "https://journals.lww.com/annalsofsurgery/Abstract/2019/03000/Use_of_Statistical_Process_Control_in_Surgical.21.aspx",
     },
     "Registered Nurse": {
-        "Nursing Statistics Education": "https://www.nln.org/",
-        "Healthcare Quality Metrics": "https://www.ahrq.gov/talkingquality/index.html",
-        "Patient Safety Data": "https://www.psqh.com/",
-        "Nursing Research": "https://www.nursingresearch.org/",
+        "Case Study: Statistical Process Control for Hospital-Acquired Infections": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917520/",
+        "Real Example: Interpreting Lab Values Using Normal Distribution": "https://www.ncbi.nlm.nih.gov/books/NBK279390/",
+        "Statistics in Nursing Quality Improvement Projects": "https://www.ahrq.gov/patient-safety/resources/advances-in-patient-safety/vol4/kennedy.html",
+        "AP Stats Application: Fall Risk Assessment Scoring": "https://pubmed.ncbi.nlm.nih.gov/29166326/",
     },
     "Cybersecurity Professional": {
-        "Cybersecurity Statistics": "https://www.sans.org/",
-        "Security Data Analysis": "https://www.cisecurity.org/",
-        "Threat Intelligence": "https://www.mitre.org/",
-        "InfoSec Statistics": "https://www.isaca.org/resources/isaca-journal/issues",
+        "Case Study: Anomaly Detection Using Statistical Methods at AWS": "https://aws.amazon.com/blogs/security/use-machine-learning-to-detect-anomalies-in-aws-cloudtrail-logs/",
+        "Real Example: Bayesian Networks for Threat Detection": "https://www.sciencedirect.com/science/article/pii/S0167404817301577",
+        "Statistics in Cybersecurity Incident Response": "https://www.sans.org/white-papers/37155/",
+        "AP Stats Application: Network Traffic Pattern Analysis": "https://dl.acm.org/doi/10.1145/3134600.3134646",
     },
     "Cosmetic Scientist": {
-        "Cosmetic Science Statistics": "https://www.scconline.org/",
-        "Product Testing Methods": "https://www.astm.org/standards/cosmetic-and-personal-care-products.html",
-        "Consumer Research Statistics": "https://www.quirks.com/",
-        "Beauty Industry Data": "https://www.cosmeticsdesign.com/",
+        "Case Study: Statistical Design of Experiments for Skincare Products": "https://www.sciencedirect.com/science/article/pii/S101113441830319X",
+        "Real Example: Regression Analysis for Cosmetic Formulation": "https://www.cosmeticsandtoiletries.com/testing/statistics/Statistical-Design-of-Experiments-for-Cosmetic-Formulation-570047371.html",
+        "Statistics in Consumer Product Testing": "https://www.mdpi.com/2079-9284/8/3/75",
+        "AP Stats Application: Shelf-Life Prediction Models": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-3010.2006.00573.x",
     },
     "Dermatology Physician Assistant": {
-        "Dermatology Statistics": "https://www.aad.org/",
-        "Medical Diagnostics": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5540140/",
-        "Clinical Study Analysis": "https://www.jaad.org/",
-        "Skin Cancer Statistics": "https://www.cancer.org/cancer/types/skin-cancer.html",
+        "Case Study: Diagnostic Accuracy Statistics for Skin Cancer Detection": "https://jamanetwork.com/journals/jamadermatology/fullarticle/2768620",
+        "Real Example: Confidence Intervals in Treatment Efficacy Studies": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6899265/",
+        "Statistics in Dermatology Clinical Trials": "https://www.jidonline.org/article/S0022-202X(15)41199-5/fulltext",
+        "AP Stats Application: ROC Curves for Diagnostic Tests": "https://www.ncbi.nlm.nih.gov/books/NBK557530/",
     },
     "Electrical Engineer": {
-        "Engineering Statistics": "https://www.ieee.org/",
-        "Quality Control Methods": "https://asq.org/",
-        "Reliability Engineering": "https://www.weibull.com/",
-        "Electrical Standards": "https://www.nema.org/standards",
+        "Case Study: Statistical Quality Control in Semiconductor Manufacturing": "https://www.sciencedirect.com/science/article/pii/S0166361506002305",
+        "Real Example: Reliability Engineering Using Weibull Distribution": "https://www.weibull.com/hotwire/issue14/relbasics14.htm",
+        "Statistics in Circuit Design and Testing": "https://ieeexplore.ieee.org/document/6682919",
+        "AP Stats Application: Tolerance Analysis in Electronic Components": "https://www.allaboutcircuits.com/technical-articles/understanding-statistical-tolerancing-monte-carlo-simulation/",
     },
     "Civil Engineer": {
-        "Structural Statistics": "https://www.asce.org/",
-        "Construction Data Analysis": "https://www.agc.org/",
-        "Materials Testing Standards": "https://www.astm.org/",
-        "Infrastructure Statistics": "https://www.infrastructurereportcard.org/",
+        "Case Study: Statistical Analysis of Bridge Load Testing": "https://ascelibrary.org/doi/10.1061/%28ASCE%29CF.1943-5509.0001333",
+        "Real Example: Probability-Based Structural Safety Factors": "https://www.sciencedirect.com/science/article/pii/S014102961730086X",
+        "Statistics in Earthquake Engineering Design": "https://peer.berkeley.edu/publications/peer_reports/reports_2015/web_PEER-2015-05-Moehle.pdf",
+        "AP Stats Application: Concrete Strength Sampling and Testing": "https://www.concrete.org/publications/internationalconcreteabstractsportal/m/details/id/51686890",
     },
     "Pediatrician": {
-        "Pediatric Growth Charts": "https://www.cdc.gov/growthcharts/",
-        "Child Health Statistics": "https://www.aap.org/en/patient-care/",
-        "Clinical Evidence": "https://www.cochrane.org/",
-        "Vaccine Statistics": "https://www.cdc.gov/vaccines/index.html",
+        "Case Study: Growth Chart Percentile Analysis in Clinical Practice": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6410476/",
+        "Real Example: Vaccine Efficacy Statistical Analysis": "https://www.nejm.org/doi/full/10.1056/NEJMoa2034577",
+        "Statistics in Pediatric Clinical Guidelines": "https://publications.aap.org/pediatrics/article/145/3/e20193997/76925/Clinical-Practice-Guideline-for-the-Evaluation-and",
+        "AP Stats Application: Developmental Screening Test Statistics": "https://www.cdc.gov/ncbddd/actearly/pdf/help_pdfs/cdc_developmental_screening_guide_508.pdf",
     },
     "Software Developer": {
-        "A/B Testing Resources": "https://www.optimizely.com/optimization-glossary/ab-testing/",
-        "Machine Learning Statistics": "https://www.kaggle.com/learn/statistics",
-        "Data Science Education": "https://www.datacamp.com/courses/statistics-fundamentals",
-        "Tech Industry Data": "https://stackoverflow.blog/",
+        "Case Study: A/B Testing Statistics at Google (Large-Scale)": "https://ai.google/research/pubs/pub36500/",
+        "Real Example: Statistical Methods in Netflix Recommendation Algorithm": "https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429",
+        "Statistics in Software Performance Testing": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2001-87.pdf",
+        "AP Stats Application: Error Rate Analysis in Code Deployment": "https://engineering.fb.com/2015/08/06/production-engineering/safe-and-fast-deploys-at-facebook/",
     },
     "Physicist / Nanotechnologist": {
-        "Physics Statistics": "https://www.aps.org/",
-        "Nanotechnology Research": "https://www.nano.gov/",
-        "Experimental Design": "https://www.physicsforums.com/",
-        "Scientific Data Analysis": "https://www.nature.com/subjects/data-analysis",
+        "Case Study: Statistical Analysis in Large Hadron Collider Experiments": "https://cds.cern.ch/record/2017902/files/CERN-Brochure-2014-002-Eng.pdf",
+        "Real Example: Uncertainty Analysis in Nanoscale Measurements": "https://www.nature.com/articles/s41565-020-0658-9",
+        "Statistics in Materials Science Research": "https://www.sciencedirect.com/science/article/pii/S1359645419305711",
+        "AP Stats Application: Particle Distribution Analysis": "https://iopscience.iop.org/article/10.1088/1361-6463/ab5b8c",
     }
 }
 
-# App data
+# App data (same structure, but with resource keys)
 slides = [
     {
         "title": "📊 AP Statistics",
@@ -470,26 +478,31 @@ All content is fully editable once transferred to PowerPoint or Google Slides.""
     return instructions
 
 def display_resources(career_key):
-    """Display resource links for a specific career"""
+    """Display resource links with real-world examples and case studies"""
     if career_key in CAREER_RESOURCES:
-        st.markdown("### 🔗 Learn More & Resources")
-        st.markdown("Explore these resources to learn how statistics applies to this career:")
+        st.markdown("### 📚 Real-World Examples & Case Studies")
+        st.markdown("**See how AP Statistics-level methods are actually used in these careers:**")
         
         resources = CAREER_RESOURCES[career_key]
         for name, url in resources.items():
             st.markdown(f"""
             <div class='resource-link'>
-                📚 <a href='{url}' target='_blank'>{name}</a>
+                🔍 <a href='{url}' target='_blank'>{name}</a>
             </div>
             """, unsafe_allow_html=True)
         
-        # Also show general resources if this is a specific career
-        if career_key != "general":
-            st.markdown("---")
-            st.markdown("#### General AP Statistics Resources")
-            general_resources = CAREER_RESOURCES["general"]
-            for name, url in list(general_resources.items())[:3]:  # Show only top 3
-                st.markdown(f"• [{name}]({url})", unsafe_allow_html=True)
+        # Add a case study explanation
+        st.markdown("""
+        <div class='case-study'>
+        <strong>What you'll find in these resources:</strong>
+        <ul>
+        <li>Real data analysis examples from industry</li>
+        <li>Statistical methods used in professional settings</li>
+        <li>Case studies showing problem-solving with statistics</li>
+        <li>Examples of hypothesis testing, regression, probability in practice</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
 
 def main():
     # Initialize session state for slide navigation
@@ -526,18 +539,27 @@ def main():
         st.progress((st.session_state.current_slide + 1) / len(slides))
         st.caption(f"Slide {st.session_state.current_slide + 1} of {len(slides)}")
         
-        # Resource Links Section
+        # REAL-WORLD EXAMPLE HIGHLIGHT
         st.markdown("---")
-        st.subheader("🔗 Quick Resource Links")
+        st.subheader("🔬 Featured Real-World Example")
         
-        # Display relevant resources based on current slide
+        # Show a relevant real-world example based on current slide
         slide = slides[st.session_state.current_slide]
         if slide["type"] in ["intro", "career"] and "resources" in slide["content"]:
             career_key = slide["content"]["resources"]
             if career_key in CAREER_RESOURCES:
                 resources = CAREER_RESOURCES[career_key]
-                for name, url in list(resources.items())[:2]:  # Show top 2 in sidebar
-                    st.markdown(f"[{name}]({url})")
+                # Show first resource as featured
+                first_name, first_url = list(resources.items())[0]
+                st.markdown(f"**Featured:** [{first_name}]({first_url})")
+                st.caption("Click to see a real case study!")
+        
+        # Quick AP Stats real-world examples
+        st.markdown("---")
+        st.subheader("📈 Quick Examples")
+        st.markdown("[Netflix A/B Testing](https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15)")
+        st.markdown("[CDC Case Studies](https://www.cdc.gov/nchs/pressroom/casestudies.htm)")
+        st.markdown"[Sports Analytics](https://fivethirtyeight.com/features/how-our-2020-nfl-predictions-work/)")
         
         # Download section
         st.markdown("---")
@@ -550,13 +572,6 @@ def main():
             file_name="PowerPoint_Conversion_Instructions.txt",
             mime="text/plain"
         )
-        
-        # Quick AP Stats info
-        st.markdown("---")
-        st.subheader("AP Statistics Info")
-        st.markdown("[College Board AP Stats](https://apcentral.collegeboard.org/courses/ap-statistics)")
-        st.markdown("[AP Stats Course Guide](https://apstudents.collegeboard.org/courses/ap-statistics)")
-        st.markdown("[AP Stats Practice Tests](https://www.khanacademy.org/math/ap-statistics)")
     
     # Main content area
     slide = slides[st.session_state.current_slide]
@@ -567,15 +582,26 @@ def main():
         st.markdown(f"<h2 class='sub-header'>{slide['subtitle']}</h2>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='text-align: center; color: #667eea; margin-top: 2rem;'>{slide['content']}</h3>", unsafe_allow_html=True)
         
-        # Add resource box
-        with st.expander("📚 Quick Start Resources"):
-            st.markdown("""
-            **Start your AP Statistics journey with these resources:**
-            - [Official College Board AP Statistics Page](https://apcentral.collegeboard.org/courses/ap-statistics)
-            - [Khan Academy AP Statistics Course](https://www.khanacademy.org/math/ap-statistics)
-            - [AP Statistics Student Guide](https://apstudents.collegeboard.org/courses/ap-statistics)
-            - [Statistics Career Information](https://www.amstat.org/asa/education/Career-Paths-for-Statisticians.aspx)
-            """)
+        # Real-world examples preview
+        with st.expander("🎯 See Real-World Statistics Examples", expanded=True):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**Famous Case Studies:**")
+                st.markdown("""
+                - [Netflix: A/B Testing Platform](https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15)
+                - [Google: Large-Scale Experiments](https://ai.google/research/pubs/pub36500/)
+                - [CDC: Public Health Statistics](https://www.cdc.gov/nchs/pressroom/casestudies.htm)
+                - [538: Sports Analytics](https://fivethirtyeight.com/features/how-our-2020-nfl-predictions-work/)
+                """)
+            with col2:
+                st.markdown("**AP Stats in Action:**")
+                st.markdown("""
+                - Hypothesis testing in medicine
+                - Regression in marketing
+                - Probability in engineering
+                - Sampling in social science
+                - Confidence intervals in research
+                """)
         
         # Add decorative gradient background
         st.markdown("""
@@ -599,8 +625,11 @@ def main():
         st.info(slide["content"]["applications"])
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Display general resources
+        # Display general resources with emphasis on real-world examples
         st.markdown("---")
+        st.markdown("### 🔍 Explore Real Statistics in Action")
+        st.markdown("**These aren't just textbook problems - here's how statistics is used in the real world:**")
+        
         display_resources("general")
     
     elif slide["type"] == "career":
@@ -619,33 +648,45 @@ def main():
             
             st.markdown("</div>", unsafe_allow_html=True)
         
-        # Display career-specific resources
+        # Display career-specific resources with REAL case studies
         if "resources" in slide["content"]:
             display_resources(slide["content"]["resources"])
+            
+            # Add practical exercise suggestion
+            st.markdown("""
+            <div class='case-study'>
+            <strong>💡 Try This AP Statistics Connection:</strong>
+            <p>Look at the case studies above and identify:</p>
+            <ul>
+            <li>What statistical methods are being used? (hypothesis testing, regression, etc.)</li>
+            <li>What data was collected and how?</li>
+            <li>What conclusions were drawn from the statistical analysis?</li>
+            <li>How could this analysis be improved or expanded?</li>
+            </ul>
+            </div>
+            """, unsafe_allow_html=True)
     
     elif slide["type"] == "closing":
         st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
         
-        # Add resource section before closing
-        with st.expander("🎓 Next Steps & Resources", expanded=True):
-            col1, col2 = st.columns(2)
+        # Show top real-world examples from various fields
+        with st.expander("🔬 Top Real-World Statistics Examples by Field", expanded=True):
+            col1, col2, col3 = st.columns(3)
+            
             with col1:
-                st.markdown("**AP Statistics Resources:**")
-                st.markdown("""
-                - [College Board AP Stats](https://apcentral.collegeboard.org/courses/ap-statistics)
-                - [AP Stats Course Overview](https://apstudents.collegeboard.org/courses/ap-statistics)
-                - [Practice Questions & Tests](https://www.khanacademy.org/math/ap-statistics)
-                - [Statistics Career Paths](https://www.amstat.org/asa/education/Career-Paths-for-Statisticians.aspx)
-                """)
+                st.markdown("**Healthcare:**")
+                st.markdown("• [NICU Infection Control](https://www.jstor.org/stable/10.1086/664772)")
+                st.markdown("• [Vaccine Efficacy Analysis](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577)")
             
             with col2:
-                st.markdown("**College Planning:**")
-                st.markdown("""
-                - [College Majors Requiring Stats](https://www.collegeboard.org/)
-                - [Statistics in College Admissions](https://blog.collegeboard.org/)
-                - [Career Exploration Tools](https://www.bls.gov/ooh/math/statisticians.htm)
-                - [STEM Career Resources](https://www.ed.gov/stem)
-                """)
+                st.markdown("**Technology:**")
+                st.markdown("• [Netflix A/B Testing](https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15)")
+                st.markdown("• [Google Experiments](https://ai.google/research/pubs/pub36500/)")
+            
+            with col3:
+                st.markdown("**Engineering:**")
+                st.markdown("• [Bridge Load Testing](https://ascelibrary.org/doi/10.1061/%28ASCE%29CF.1943-5509.0001333)")
+                st.markdown("• [Quality Control](https://www.sciencedirect.com/science/article/pii/S0166361506002305)")
         
         # Add decorative gradient background
         st.markdown("""
@@ -659,33 +700,5 @@ def main():
         st.markdown("</div>", unsafe_allow_html=True)
         
         st.success(slide["content"]["call_to_action"])
-        st.info(slide["content"]["contact"])
-    
-    # Footer with keyboard navigation hint
-    st.markdown("---")
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        st.caption("💡 **Tip:** Use the sidebar to navigate or click the buttons below")
-        st.caption("🔗 **Resources:** Click links in each section to learn more about careers and statistics")
-    
-    # Bottom navigation buttons
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        if st.button("⏮️ First", use_container_width=True):
-            st.session_state.current_slide = 0
-            st.rerun()
-    with col2:
-        if st.button("⬅️ Back", use_container_width=True, disabled=st.session_state.current_slide == 0):
-            st.session_state.current_slide -= 1
-            st.rerun()
-    with col4:
-        if st.button("Next ➡️", use_container_width=True, disabled=st.session_state.current_slide == len(slides)-1):
-            st.session_state.current_slide += 1
-            st.rerun()
-    with col5:
-        if st.button("Last ⏭️", use_container_width=True):
-            st.session_state.current_slide = len(slides) - 1
-            st.rerun()
-
-if __name__ == "__main__":
-    main()
+        
+        # Final
