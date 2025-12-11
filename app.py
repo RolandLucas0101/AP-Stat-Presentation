@@ -2,7 +2,6 @@ import streamlit as st
 import base64
 from io import BytesIO
 from datetime import datetime
-import webbrowser
 import urllib.parse
 
 # Page configuration
@@ -197,6 +196,23 @@ st.markdown("""
     .alternative-video {
         background: #fff3cd;
         border-left: 4px solid #ffc107;
+    }
+    
+    .clickable-link {
+        display: block;
+        padding: 10px 15px;
+        margin: 5px 0;
+        background: #ff0000;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .clickable-link:hover {
+        background: #cc0000;
+        color: white;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -719,15 +735,16 @@ def display_youtube_search(career_name, keywords=None):
     st.markdown("### 🔍 Search YouTube for Videos")
     st.markdown(f"**Find current videos about statistics in {career_name}:**")
     
-    # Display search keywords as clickable buttons
-    st.markdown("**Suggested search terms:**")
-    keyword_cols = st.columns(3)
-    selected_keyword = None
+    # Display search keywords as clickable links
+    st.markdown("**Suggested search terms (click to open):**")
     
     for idx, keyword in enumerate(keywords[:6]):  # Show up to 6 keywords
-        with keyword_cols[idx % 3]:
-            if st.button(f"🔎 {keyword[:20]}...", key=f"search_{career_name}_{idx}"):
-                selected_keyword = keyword
+        search_url = create_youtube_search_url(keyword)
+        st.markdown(f"""
+        <a href="{search_url}" target="_blank" class="clickable-link">
+        🔍 {keyword}
+        </a>
+        """, unsafe_allow_html=True)
     
     # Custom search box
     st.markdown("**Or enter your own search:**")
@@ -735,20 +752,22 @@ def display_youtube_search(career_name, keywords=None):
     with col1:
         custom_search = st.text_input(
             "Search YouTube:",
-            value=selected_keyword if selected_keyword else f"statistics in {career_name}",
+            value=f"statistics in {career_name}",
             key=f"custom_search_{career_name}",
             placeholder=f"Search for statistics in {career_name}..."
         )
     with col2:
         if custom_search:
             search_url = create_youtube_search_url(custom_search)
-            if st.button("Search", key=f"go_{career_name}"):
-                webbrowser.open_new_tab(search_url)
-                st.success(f"Opening YouTube search for: {custom_search}")
+            st.markdown(f"""
+            <a href="{search_url}" target="_blank" class="clickable-link" style="margin-top: 26px;">
+            🔍 Search
+            </a>
+            """, unsafe_allow_html=True)
     
     # Display guaranteed working videos
     st.markdown("### ✅ Guaranteed Working Videos")
-    st.markdown("**These videos are always available:**")
+    st.markdown("**These videos are always available (click to watch):**")
     
     for key, video in GUARANTEED_VIDEOS.items():
         st.markdown(f"""
@@ -1395,11 +1414,11 @@ def main():
             
             keywords = YOUTUBE_SEARCH_KEYWORDS.get(career_name, ["statistics"])
             
-            # Show top 3 keywords as buttons
+            # Show top 3 keywords as clickable links
+            st.markdown("**Click to search YouTube:**")
             for idx, keyword in enumerate(keywords[:3]):
-                if st.button(f"🔎 {keyword}", key=f"sidebar_search_{idx}", use_container_width=True):
-                    search_url = create_youtube_search_url(keyword)
-                    webbrowser.open_new_tab(search_url)
+                search_url = create_youtube_search_url(keyword)
+                st.markdown(f"[🔎 {keyword}]({search_url})")
         
         # GUARANTEED WORKING VIDEOS
         st.markdown("---")
@@ -1480,6 +1499,7 @@ def main():
         <h3>🎬 Find Videos That Work!</h3>
         <p><strong>Problem:</strong> YouTube links often break or get removed.</p>
         <p><strong>Solution:</strong> Use our search tool below to find current, working videos for each career!</p>
+        <p><strong>How to use:</strong> Click any red button below to open YouTube in a new tab with search results!</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1540,7 +1560,7 @@ def main():
         # Display resources
         st.markdown("---")
         st.markdown("### 🔍 Explore Real Statistics in Action")
-        st.markdown("**Search for these terms on YouTube to see statistics in action:**")
+        st.markdown("**Search for these terms on YouTube to see statistics in action (click to open):**")
         
         col1, col2, col3 = st.columns(3)
         keywords = YOUTUBE_SEARCH_KEYWORDS["general"]
@@ -1548,17 +1568,17 @@ def main():
         with col1:
             for keyword in keywords[:2]:
                 search_url = create_youtube_search_url(keyword)
-                st.markdown(f"[🔎 {keyword}]({search_url})")
+                st.markdown(f"[🔍 {keyword}]({search_url})")
         
         with col2:
             for keyword in keywords[2:4]:
                 search_url = create_youtube_search_url(keyword)
-                st.markdown(f"[🔎 {keyword}]({search_url})")
+                st.markdown(f"[🔍 {keyword}]({search_url})")
         
         with col3:
             for keyword in keywords[4:]:
                 search_url = create_youtube_search_url(keyword)
-                st.markdown(f"[🔎 {keyword}]({search_url})")
+                st.markdown(f"[🔍 {keyword}]({search_url})")
     
     elif slide["type"] == "career":
         career_name = slide["title"].replace("🏥 ", "").replace("📈 ", "").replace("⚕️ ", "").replace("💉 ", "").replace("🔒 ", "").replace("🧪 ", "").replace("🩺 ", "").replace("⚡ ", "").replace("🏗️ ", "").replace("👶 ", "").replace("💻 ", "").replace("🔬 ", "")
@@ -1610,7 +1630,7 @@ def main():
         
         # YouTube search section for career exploration
         st.markdown("### 🔍 Explore More Careers")
-        st.markdown("**Search YouTube to learn about statistics in different fields:**")
+        st.markdown("**Click these links to search YouTube and learn about statistics in different fields:**")
         
         col1, col2 = st.columns(2)
         
@@ -1620,7 +1640,7 @@ def main():
                 keywords = YOUTUBE_SEARCH_KEYWORDS.get(career, [f"statistics in {career}"])
                 if keywords:
                     search_url = create_youtube_search_url(keywords[0])
-                    st.markdown(f"[🔎 {career}]({search_url})")
+                    st.markdown(f"[🔍 {career}]({search_url})")
         
         with col2:
             st.markdown("**Technology & Engineering:**")
@@ -1628,7 +1648,7 @@ def main():
                 keywords = YOUTUBE_SEARCH_KEYWORDS.get(career, [f"statistics in {career}"])
                 if keywords:
                     search_url = create_youtube_search_url(keywords[0])
-                    st.markdown(f"[🔎 {career}]({search_url})")
+                    st.markdown(f"[🔍 {career}]({search_url})")
         
         # Add decorative gradient background
         st.markdown("""
@@ -1652,7 +1672,7 @@ def main():
         st.markdown("### 📺 Start Your Search")
         st.markdown("""
         <div class='video-container'>
-        <strong>Begin exploring statistics videos:</strong>
+        <strong>Click these links to begin exploring statistics videos:</strong>
         <div class='video-link'>
             ▶️ <a href="https://www.youtube.com/results?search_query=introduction+to+statistics" target="_blank">Search: "Introduction to Statistics"</a>
         </div>
@@ -1669,27 +1689,8 @@ def main():
     st.markdown("---")
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.caption("💡 **Tip:** Click any search button to open YouTube in a new tab")
+        st.caption("💡 **Tip:** Click any search link to open YouTube in a new tab")
         st.caption("🎬 **Guarantee:** The videos in the sidebar always work!")
-    
-    # Bottom navigation buttons
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        if st.button("⏮️ First", use_container_width=True):
-            st.session_state.current_slide = 0
-            st.rerun()
-    with col2:
-        if st.button("⬅️ Back", use_container_width=True, disabled=st.session_state.current_slide == 0):
-            st.session_state.current_slide -= 1
-            st.rerun()
-    with col4:
-        if st.button("Next ➡️", use_container_width=True, disabled=st.session_state.current_slide == len(slides)-1):
-            st.session_state.current_slide += 1
-            st.rerun()
-    with col5:
-        if st.button("Last ⏭️", use_container_width=True):
-            st.session_state.current_slide = len(slides) - 1
-            st.rerun()
 
 if __name__ == "__main__":
     main()
