@@ -229,7 +229,7 @@ st.markdown("""
     .teacher-banner h3 {
         color: white;
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     
     .teacher-banner p {
