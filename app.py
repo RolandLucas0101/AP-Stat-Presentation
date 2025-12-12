@@ -1,4 +1,3 @@
-
 import streamlit as st
 import base64
 from io import BytesIO
@@ -108,7 +107,7 @@ st.markdown("""
         padding: 1rem;
         background: #f0f8ff;
         border-radius: 8px;
-        border-left: 4px solid #ff0000;
+        border-left: 4px solid #667eea;
     }
     
     .video-link {
@@ -177,7 +176,7 @@ st.markdown("""
     }
     
     .youtube-search-btn {
-        background: #ff0000;
+        background: #667eea;
         color: white;
         padding: 8px 16px;
         border-radius: 5px;
@@ -203,22 +202,23 @@ st.markdown("""
         display: block;
         padding: 10px 15px;
         margin: 5px 0;
-        background: #ff0000;
+        background: #667eea;
         color: white;
         text-align: center;
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
+        transition: background-color 0.3s ease;
     }
     
     .clickable-link:hover {
-        background: #cc0000;
+        background: #5a67d8;
         color: white;
     }
     
     .teacher-banner {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 10px;
         margin: 1rem 0;
         border: 2px solid #fff;
@@ -229,12 +229,20 @@ st.markdown("""
     .teacher-banner h3 {
         color: white;
         margin-bottom: 0.5rem;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        font-weight: bold;
     }
     
     .teacher-banner p {
-        color: #e0e0e0;
-        margin: 0.25rem 0;
+        color: #f0f0f0;
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .teacher-banner p:first-of-type {
+        font-weight: bold;
+        font-size: 1.8rem;
+        margin-top: 1rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -1555,7 +1563,7 @@ def main():
         
         return
     
-    # TEACHER BANNER WITH NEW HEADER
+    # TEACHER BANNER WITH NEW HEADER AND LARGER FONT
     st.markdown("""
     <div class="teacher-banner">
         <h3>AP Statistics: The Data Skills Every Career Demands</h3>
