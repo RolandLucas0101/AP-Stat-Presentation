@@ -850,4 +850,7 @@ OPTION 1 - MANUAL RECREATION (Recommended for full control):
    - Apply similar formatting (colors, fonts, spacing)
    - Add gradient backgrounds where shown
 
-OPT
+OPTION 2 - SCREENSHOT METHOD (Quick):
+1. Use this presentation in full-screen mode
+2. Take screenshots of each slide
+3. Import screenshots
