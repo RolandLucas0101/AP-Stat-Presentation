@@ -1,4 +1,4 @@
-
+[file content begin]
 import streamlit as st
 import base64
 from io import BytesIO
@@ -29,6 +29,46 @@ st.markdown("""
         color: #764ba2;
         text-align: center;
         margin-bottom: 2rem;
+    }
+    
+    .teacher-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2.5rem;
+        border-radius: 15px;
+        margin: 1rem 0 2rem 0;
+        border: 2px solid #fff;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .teacher-banner h2 {
+        color: white;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    
+    .teacher-banner h3 {
+        color: white;
+        margin: 1rem 0 0.5rem 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    
+    .teacher-banner p {
+        color: #f0f0f0;
+        margin: 0.25rem 0;
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+    
+    .teacher-credit {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        font-style: italic;
     }
     
     .slide-card {
@@ -214,27 +254,6 @@ st.markdown("""
     .clickable-link:hover {
         background: #cc0000;
         color: white;
-    }
-    
-    .teacher-banner {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1.5rem;
-        border-radius: 10px;
-        margin: 1rem 0;
-        border: 2px solid #fff;
-        color: white;
-        text-align: center;
-    }
-    
-    .teacher-banner h3 {
-        color: white;
-        margin-bottom: 0.5rem;
-        font-size: 1.5rem;
-    }
-    
-    .teacher-banner p {
-        color: #e0e0e0;
-        margin: 0.25rem 0;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -1555,10 +1574,10 @@ def main():
         
         return
     
-    # TEACHER BANNER WITH NEW HEADER
+    # UPDATED TEACHER BANNER WITH LARGER HEADER (matching main presentation headers)
     st.markdown("""
     <div class="teacher-banner">
-        <h3>AP Statistics: The Data Skills Every Career Demands</h3>
+        <h2>AP Statistics: The Data Skills Every Career Demands</h2>
         <p>Compiled by Dr. Roland Lucas</p>
         <p>AP Statistics Teacher at Newark Tech</p>
     </div>
@@ -1755,3 +1774,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+[file content end]
