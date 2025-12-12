@@ -966,7 +966,7 @@ def create_flyer_html():
         <h1>📊 AP Statistics</h1>
         <h2>Your Gateway to Career Success</h2>
         <p style="font-weight: bold; font-size: 12pt;">Why Juniors Should Take AP Stats Senior Year</p>
-        <p style="font-size: 10pt; color: #666;">''' + today + '''</p>
+        <p style="font-size: 12pt; color: #666;">''' + today + '''</p>
         <div class="teacher-credit">
             Compiled by Dr. Roland Lucas<br>
             AP Statistics Teacher at Newark Tech
