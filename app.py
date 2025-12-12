@@ -853,4 +853,882 @@ OPTION 1 - MANUAL RECREATION (Recommended for full control):
 OPTION 2 - SCREENSHOT METHOD (Quick):
 1. Use this presentation in full-screen mode
 2. Take screenshots of each slide
-3. Import screenshots
+3. Import screenshots into PowerPoint/Google Slides
+4. Add text boxes over screenshots for editability
+5. Adjust formatting as needed
+
+DESIGN TIPS:
+- Use gradient backgrounds (purple/blue theme)
+- Keep text large and readable
+- Use consistent colors: Primary purple (#667eea), Secondary purple (#764ba2)
+- Include emojis for visual interest
+- Use white/light gray cards for examples
+- Maintain spacing and hierarchy
+
+CONTENT ORGANIZATION:
+Slide 1: Title slide
+Slide 2: Introduction to AP Statistics benefits
+Slides 3-14: Individual careers (12 careers)
+Slide 15: Closing/Call to action
+
+All content is fully editable once transferred to PowerPoint or Google Slides."""
+    
+    return instructions
+
+def create_flyer_html():
+    """Create a two-page flyer summary (front and back) as HTML"""
+    today = datetime.now().strftime("%B %d, %Y")
+    
+    flyer_html = '''<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Statistics Flyer</title>
+    <style>
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 11pt;
+                line-height: 1.4;
+                margin: 0;
+                padding: 0;
+                color: #000;
+            }
+            .page {
+                page-break-after: always;
+                padding: 0.5in;
+                min-height: 9in;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            h1 {
+                color: #667eea;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 24pt;
+            }
+            h2 {
+                color: #764ba2;
+                border-bottom: 2px solid #764ba2;
+                padding-bottom: 5px;
+                font-size: 16pt;
+            }
+            .highlight {
+                background-color: #fff3cd;
+                padding: 2px 4px;
+                border-radius: 3px;
+            }
+            .section {
+                margin: 15px 0;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 5px;
+                border: 1px solid #dee2e6;
+            }
+            .career-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 15px 0;
+            }
+            .career-item {
+                padding: 10px;
+                background: white;
+                border: 1px solid #dee2e6;
+                border-radius: 4px;
+                font-size: 10pt;
+            }
+            .stat-method {
+                background: #e7f3ff;
+                padding: 8px;
+                margin: 5px 0;
+                border-left: 3px solid #667eea;
+                font-size: 10pt;
+            }
+            .contact-info {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 10pt;
+                padding-top: 15px;
+                border-top: 2px solid #ccc;
+            }
+            ul, ol {
+                margin-left: 20px;
+            }
+            li {
+                margin: 8px 0;
+            }
+            .teacher-credit {
+                text-align: center;
+                font-style: italic;
+                font-size: 10pt;
+                color: #666;
+                margin-top: 5px;
+                padding: 5px;
+                border-top: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 (FRONT) -->
+<div class="page">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1>📊 AP Statistics</h1>
+        <h2>Your Gateway to Career Success</h2>
+        <p style="font-weight: bold; font-size: 12pt;">Why Juniors Should Take AP Stats Senior Year</p>
+        <p style="font-size: 10pt; color: #666;">''' + today + '''</p>
+        <div class="teacher-credit">
+            Compiled by Dr. Roland Lucas<br>
+            AP Statistics Teacher at Newark Tech
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🚀 Key Benefits of AP Statistics</h2>
+        <ul>
+            <li><strong>College Credit:</strong> Earn credits and save thousands in tuition</li>
+            <li><strong>College Admissions:</strong> Stand out in competitive applications</li>
+            <li><strong>Career Preparation:</strong> Required for most STEM and business majors</li>
+            <li><strong>Real-World Skills:</strong> Data analysis, critical thinking, problem-solving</li>
+            <li><strong>Versatility:</strong> Applies to healthcare, tech, engineering, business, and more</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🎯 AP Statistics in Real Careers</h2>
+        <div class="career-grid">
+            <div class="career-item">
+                <strong style="color: #667eea;">🏥 NICU Nurse</strong><br>
+                • Vital sign statistical analysis<br>
+                • Treatment effectiveness testing<br>
+                • Infection control statistics
+            </div>
+            <div class="career-item">
+                <strong style="color: #667eea;">📈 Marketing Professional</strong><br>
+                • A/B testing campaigns<br>
+                • Customer segmentation analysis<br>
+                • ROI statistical analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #667eea;">⚕️ Pediatric Surgeon</strong><br>
+                • Surgical risk probability<br>
+                • Outcome prediction models<br>
+                • Clinical trial statistics
+            </div>
+            <div class="career-item">
+                <strong style="color: #667eea;">🔒 Cybersecurity</strong><br>
+                • Anomaly detection algorithms<br>
+                • Threat probability modeling<br>
+                • Risk statistical analysis
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>📚 AP Stats Methods You\'ll Learn</h2>
+        <div class="stat-method"><strong>Hypothesis Testing:</strong> Test ideas with data</div>
+        <div class="stat-method"><strong>Regression Analysis:</strong> Find relationships between variables</div>
+        <div class="stat-method"><strong>Probability Distributions:</strong> Model uncertainty</div>
+        <div class="stat-method"><strong>Confidence Intervals:</strong> Estimate with precision</div>
+        <div class="stat-method"><strong>Sampling Methods:</strong> Study populations efficiently</div>
+        <div class="stat-method"><strong>Experimental Design:</strong> Design valid studies</div>
+    </div>
+    
+    <div class="contact-info">
+        <p><strong>Questions?</strong> Talk to your guidance counselor about registering for AP Statistics!</p>
+    </div>
+</div>
+
+<!-- PAGE 2 (BACK) -->
+<div class="page page-break">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #764ba2;">AP Statistics Career Connections</h1>
+        <div class="teacher-credit">
+            AP Statistics: The Data Skills Every Career Demands<br>
+            Dr. Roland Lucas, Newark Tech
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>💡 More Career Examples</h2>
+        <div class="career-grid">
+            <div class="career-item">
+                <strong style="color: #764ba2;">🧪 Cosmetic Scientist</strong><br>
+                • Product testing statistics<br>
+                • Formulation optimization<br>
+                • Consumer research analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">⚡ Electrical Engineer</strong><br>
+                • Quality control statistics<br>
+                • Reliability testing<br>
+                • Circuit failure analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">🏗️ Civil Engineer</strong><br>
+                • Structural safety factors<br>
+                • Material strength testing<br>
+                • Load probability analysis
+            </div>
+            <div class="career-item">
+                <strong style="color: #764ba2;">💻 Software Developer</strong><br>
+                • A/B feature testing<br>
+                • Algorithm optimization<br>
+                • Performance metrics analysis
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🔗 Real-World Case Studies</h2>
+        <p>Statistics in action across industries:</p>
+        <ul>
+            <li><strong>Netflix:</strong> A/B testing thousands of interface designs</li>
+            <li><strong>CDC:</strong> Tracking disease outbreaks with statistics</li>
+            <li><strong>Google:</strong> Analyzing search patterns and user behavior</li>
+            <li><strong>Hospitals:</strong> Reducing infection rates with statistical process control</li>
+            <li><strong>Manufacturing:</strong> Ensuring quality through statistical sampling</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🎓 College Majors That Require Statistics</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <div>
+                <ul>
+                    <li>All Engineering fields</li>
+                    <li>Business & Economics</li>
+                    <li>Psychology & Sociology</li>
+                    <li>Biology & Chemistry</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Computer Science</li>
+                    <li>Data Science</li>
+                    <li>Environmental Science</li>
+                    <li>Public Health</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>📞 Take Action Today!</h2>
+        <p><strong>Steps to Register for AP Statistics:</strong></p>
+        <ol>
+            <li>Talk to your current math teacher about your readiness</li>
+            <li>Visit your guidance counselor for scheduling</li>
+            <li>Check your school\'s AP course offerings and deadlines</li>
+            <li>Discuss the benefits with parents/guardians</li>
+            <li>Register before the course selection deadline</li>
+        </ol>
+    </div>
+    
+    <div class="contact-info">
+        <p style="font-size: 12pt; font-weight: bold; color: #667eea;">
+        Your future career starts with the decisions you make today!
+        </p>
+        <p style="font-style: italic; margin-top: 10px;">
+        "In God we trust, all others must bring data." - W. Edwards Deming
+        </p>
+        <div class="teacher-credit">
+            <strong>AP Statistics: The Data Skills Every Career Demands</strong><br>
+            Compiled by Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
+        </div>
+    </div>
+</div>
+
+</body>
+</html>'''
+    
+    return flyer_html
+
+def create_complete_presentation_html():
+    """Create a COMPLETE printable version of ALL slides"""
+    today = datetime.now().strftime("%B %d, %Y")
+    
+    presentation_html = '''<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Statistics Full Presentation</title>
+    <style>
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 12pt;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0;
+                color: #000;
+                background: white;
+            }
+            .slide {
+                page-break-after: always;
+                padding: 0.5in;
+                min-height: 9.5in;
+            }
+            h1 {
+                color: #667eea;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 28pt;
+            }
+            h2 {
+                color: #764ba2;
+                border-bottom: 3px solid #764ba2;
+                padding-bottom: 10px;
+                margin-top: 30px;
+                font-size: 20pt;
+            }
+            h3 {
+                color: #333;
+                margin-top: 25px;
+                font-size: 16pt;
+            }
+            .example {
+                background: #f8f9fa;
+                padding: 15px;
+                margin: 15px 0;
+                border-left: 5px solid #667eea;
+                border-radius: 5px;
+            }
+            .benefit-list {
+                margin: 20px 0;
+                padding-left: 20px;
+            }
+            .benefit-list li {
+                margin: 10px 0;
+                font-size: 11pt;
+            }
+            .stat-term {
+                background: #fff3cd;
+                padding: 3px 6px;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+            .footer {
+                position: absolute;
+                bottom: 0.5in;
+                width: calc(100% - 1in);
+                text-align: center;
+                font-size: 10pt;
+                color: #666;
+                border-top: 1px solid #ccc;
+                padding-top: 10px;
+            }
+            .page-number::after {
+                content: "Page " counter(page);
+            }
+            .career-title {
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+            .highlight-box {
+                background: #e7f3ff;
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 8px;
+                border: 1px solid #b8d4ff;
+            }
+            .resources {
+                background: #f0f7ff;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 8px;
+                font-size: 11pt;
+            }
+            .resources h4 {
+                margin-top: 0;
+                color: #667eea;
+            }
+            .print-header {
+                text-align: center;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+                border-bottom: 2px solid #667eea;
+            }
+            .print-header small {
+                font-size: 10pt;
+                color: #666;
+            }
+            ul, ol {
+                margin-left: 25px;
+            }
+            li {
+                margin: 8px 0;
+            }
+            .teacher-credit {
+                font-style: italic;
+                color: #666;
+                text-align: center;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #ccc;
+                font-size: 11pt;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="print-header">
+    <h1>AP Statistics Career Presentation</h1>
+    <p><strong>AP Statistics: The Data Skills Every Career Demands</strong></p>
+    <small>Generated on ''' + today + ''' | All content expanded for printing</small>
+    <div class="teacher-credit">
+        Compiled by Dr. Roland Lucas<br>
+        AP Statistics Teacher at Newark Tech
+    </div>
+</div>'''
+    
+    # Add ALL slides to the printable version
+    for i, slide in enumerate(slides):
+        presentation_html += '<div class="slide">\n'
+        
+        if slide["type"] == "title":
+            presentation_html += f'''
+            <h1>{slide["title"]}</h1>
+            <h2 style="text-align: center; color: #764ba2;">{slide["subtitle"]}</h2>
+            <div style="text-align: center; margin-top: 100px; font-size: 16pt;">
+                {slide["content"]}
+            </div>
+            <div class="teacher-credit">
+                AP Statistics: The Data Skills Every Career Demands<br>
+                Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
+            </div>
+            '''
+            
+        elif slide["type"] == "intro":
+            presentation_html += f'''
+            <h1>{slide["title"]}</h1>
+            
+            <div class="highlight-box">
+                <h2>College & Career Benefits</h2>
+                <ul class="benefit-list">
+            '''
+            for benefit in slide["content"]["benefits"]:
+                presentation_html += f'<li>{benefit}</li>\n'
+            presentation_html += '''
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h2>Real-World Applications</h2>
+                <p>''' + slide["content"]["applications"] + '''</p>
+            </div>
+            
+            <div class="resources">
+                <h4>📚 General Resources for AP Statistics:</h4>
+                <ul>
+                    <li><strong>YouTube Search:</strong> "Introduction to Statistics" or "AP Statistics course"</li>
+                    <li><strong>Khan Academy AP Statistics:</strong> Free video lessons and practice problems</li>
+                    <li><strong>College Board AP Statistics:</strong> Official course information and resources</li>
+                    <li><strong>American Statistical Association:</strong> Career information and case studies</li>
+                </ul>
+            </div>
+            '''
+            
+        elif slide["type"] == "career":
+            career_name = slide["title"].replace("🏥 ", "").replace("📈 ", "").replace("⚕️ ", "").replace("💉 ", "").replace("🔒 ", "").replace("🧪 ", "").replace("🩺 ", "").replace("⚡ ", "").replace("🏗️ ", "").replace("👶 ", "").replace("💻 ", "").replace("🔬 ", "")
+            
+            presentation_html += f'''
+            <h1>{slide["title"]}</h1>
+            
+            <div class="career-title">
+                <h2>{slide["content"]["description"]}</h2>
+            </div>
+            '''
+            
+            for example in slide["content"]["examples"]:
+                content_with_terms = example["content"].replace(
+                    "<span class='highlight'>", "<span class='stat-term'>"
+                ).replace("</span>", "</span>")
+                
+                presentation_html += f'''
+                <div class="example">
+                    <h3>{example["title"]}</h3>
+                    <p>{content_with_terms}</p>
+                </div>
+                '''
+            
+            # Add YouTube search tips
+            presentation_html += f'''
+            <div class="resources">
+                <h4>📺 Find Videos About {career_name}:</h4>
+                <p><strong>Search YouTube for:</strong></p>
+                <ul>
+            '''
+            
+            keywords = YOUTUBE_SEARCH_KEYWORDS.get(career_name, [f"statistics in {career_name}"])
+            for keyword in keywords[:3]:  # Show top 3 keywords
+                presentation_html += f'<li>"{keyword}"</li>\n'
+            
+            presentation_html += '''
+                </ul>
+                <p><strong>Guaranteed working videos:</strong></p>
+                <ul>
+            '''
+            
+            for key, video in GUARANTEED_VIDEOS.items():
+                presentation_html += f'<li><a href="{video["url"]}">{video["title"]}</a></li>\n'
+            
+            presentation_html += '''
+                </ul>
+            </div>
+            '''
+            
+        elif slide["type"] == "closing":
+            presentation_html += f'''
+            <h1>{slide["title"]}</h1>
+            
+            <div style="text-align: center; margin: 50px 0;">
+            '''
+            for point in slide["content"]["points"]:
+                presentation_html += f'<p style="font-size: 14pt; margin: 15px 0;">{point}</p>\n'
+            presentation_html += f'''
+            </div>
+            
+            <div class="highlight-box" style="text-align: center; padding: 30px;">
+                <p style="font-size: 16pt; font-weight: bold;">{slide["content"]["call_to_action"]}</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                <h3>Next Steps</h3>
+                <p style="font-size: 12pt;">{slide["content"]["contact"]}</p>
+                <p style="margin-top: 15px; font-size: 11pt;">
+                    <strong>Video Resources:</strong><br>
+                    • Search YouTube: "AP Statistics introduction"<br>
+                    • Khan Academy: Free AP Statistics course<br>
+                    • College Board: Official AP Statistics resources
+                </p>
+            </div>
+            
+            <div class="teacher-credit">
+                <strong>AP Statistics: The Data Skills Every Career Demands</strong><br>
+                Compiled by Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
+            </div>
+            '''
+        
+        presentation_html += f'''
+        <div class="footer">
+            <div class="page-number"></div>
+            <div>Slide {i+1} of {len(slides)} | AP Statistics Career Presentation</div>
+        </div>
+        </div>
+        '''
+    
+    presentation_html += '''
+    </body>
+    </html>
+    '''
+    
+    return presentation_html
+
+def main():
+    # Initialize session state
+    if 'current_slide' not in st.session_state:
+        st.session_state.current_slide = 0
+    if 'show_printable' not in st.session_state:
+        st.session_state.show_printable = False
+    if 'show_flyer' not in st.session_state:
+        st.session_state.show_flyer = False
+    
+    # Sidebar navigation
+    with st.sidebar:
+        st.title("📊 Navigation")
+        
+        # Slide selector
+        selected_slide = st.selectbox(
+            "Go to Slide:",
+            [f"Slide {i+1}: {slides[i]['title'][:30]}..." for i in range(len(slides))],
+            index=st.session_state.current_slide
+        )
+        
+        # Update current slide based on selection
+        st.session_state.current_slide = int(selected_slide.split(":")[0].replace("Slide ", "")) - 1
+        
+        # Navigation buttons
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("⬅️ Previous", disabled=st.session_state.current_slide == 0):
+                st.session_state.current_slide = max(0, st.session_state.current_slide - 1)
+                st.rerun()
+        
+        with col2:
+            if st.button("Next ➡️", disabled=st.session_state.current_slide == len(slides)-1):
+                st.session_state.current_slide = min(len(slides)-1, st.session_state.current_slide + 1)
+                st.rerun()
+        
+        # Progress indicator
+        st.progress((st.session_state.current_slide + 1) / len(slides))
+        st.caption(f"Slide {st.session_state.current_slide + 1} of {len(slides)}")
+        
+        # YOUTUBE SEARCH SECTION
+        st.markdown("---")
+        st.subheader("🔍 Quick YouTube Search")
+        
+        # Show search keywords for current slide
+        slide = slides[st.session_state.current_slide]
+        if slide["type"] in ["intro", "career"]:
+            if slide["type"] == "intro":
+                career_name = "statistics"
+            else:
+                career_name = slide["title"].replace("🏥 ", "").replace("📈 ", "").replace("⚕️ ", "").replace("💉 ", "").replace("🔒 ", "").replace("🧪 ", "").replace("🩺 ", "").replace("⚡ ", "").replace("🏗️ ", "").replace("👶 ", "").replace("💻 ", "").replace("🔬 ", "")
+            
+            keywords = YOUTUBE_SEARCH_KEYWORDS.get(career_name, ["statistics"])
+            
+            # Show top 3 keywords as clickable links
+            st.markdown("**Click to search YouTube:**")
+            for idx, keyword in enumerate(keywords[:3]):
+                search_url = create_youtube_search_url(keyword)
+                st.markdown(f"[🔎 {keyword}]({search_url})")
+        
+        # GUARANTEED WORKING VIDEOS
+        st.markdown("---")
+        st.subheader("✅ Always Works")
+        
+        for key, video in GUARANTEED_VIDEOS.items():
+            st.markdown(f"[▶️ {video['title']}]({video['url']})")
+        
+        # PRINT/SAVE BUTTONS
+        st.markdown("---")
+        st.subheader("🖨️ Print & Save")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("📄 Print Flyer", use_container_width=True):
+                st.session_state.show_flyer = True
+                st.session_state.show_printable = False
+                st.rerun()
+        
+        with col2:
+            if st.button("📊 Full Presentation", use_container_width=True):
+                st.session_state.show_printable = True
+                st.session_state.show_flyer = False
+                st.rerun()
+        
+        # Download section
+        st.markdown("---")
+        st.subheader("Download Instructions")
+        
+        instructions = create_instructions_file()
+        st.download_button(
+            label="📥 Download PowerPoint Instructions",
+            data=instructions,
+            file_name="PowerPoint_Conversion_Instructions.txt",
+            mime="text/plain"
+        )
+    
+    # Main content area - Show printable versions if requested
+    if st.session_state.show_printable:
+        st.markdown("## 📄 Complete Printable Presentation")
+        st.info("**Instructions:** Use your browser's Print function (Ctrl+P) and select 'Save as PDF' for best results.")
+        
+        presentation_html = create_complete_presentation_html()
+        b64 = base64.b64encode(presentation_html.encode()).decode()
+        href = f'<a href="data:text/html;base64,{b64}" download="ap_statistics_presentation.html" style="background:#667eea;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">📥 Download HTML for Printing</a>'
+        st.markdown(href, unsafe_allow_html=True)
+        
+        # Display the HTML
+        st.components.v1.html(presentation_html, height=800, scrolling=True)
+        
+        if st.button("← Back to Interactive Presentation"):
+            st.session_state.show_printable = False
+            st.rerun()
+        
+        return
+    
+    if st.session_state.show_flyer:
+        st.markdown("## 📄 2-Page Printable Flyer")
+        st.info("**Instructions:** Print double-sided or save as PDF. Perfect for handing out!")
+        
+        flyer_html = create_flyer_html()
+        b64 = base64.b64encode(flyer_html.encode()).decode()
+        href = f'<a href="data:text/html;base64,{b64}" download="ap_statistics_flyer.html" style="background:#667eea;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">📥 Download HTML for Printing</a>'
+        st.markdown(href, unsafe_allow_html=True)
+        
+        # Display the HTML
+        st.components.v1.html(flyer_html, height=800, scrolling=True)
+        
+        if st.button("← Back to Interactive Presentation"):
+            st.session_state.show_flyer = False
+            st.rerun()
+        
+        return
+    
+    # UPDATED TEACHER BANNER WITH LARGER HEADER (matching main presentation headers)
+    st.markdown("""
+    <div class="teacher-banner">
+        <h2>AP Statistics: The Data Skills Every Career Demands</h2>
+        <p>Compiled by Dr. Roland Lucas</p>
+        <p>AP Statistics Teacher at Newark Tech</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # PRINT/SAVE BUTTONS IN MAIN AREA
+    st.markdown("### 🖨️ Printable Materials")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        if st.button("📄 Print 2-Page Flyer", use_container_width=True, type="primary"):
+            st.session_state.show_flyer = True
+            st.rerun()
+        st.caption("Perfect for handing out to students")
+    
+    with col2:
+        if st.button("📊 Save Full Presentation", use_container_width=True, type="secondary"):
+            st.session_state.show_printable = True
+            st.rerun()
+        st.caption("Complete 15-slide presentation for printing")
+    
+    st.markdown("---")
+    
+    # Display current slide
+    slide = slides[st.session_state.current_slide]
+    
+    if slide["type"] == "title":
+        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
+        st.markdown(f"<h2 class='sub-header'>{slide['subtitle']}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='text-align: center; color: #667eea; margin-top: 2rem;'>{slide['content']}</h3>", unsafe_allow_html=True)
+        
+        # YouTube search section
+        display_youtube_search("statistics", YOUTUBE_SEARCH_KEYWORDS["general"])
+        
+        # Add decorative gradient background
+        st.markdown("""
+        <div style='height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+        border-radius: 20px; margin-top: 2rem; display: flex; align-items: center; justify-content: center;'>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    elif slide["type"] == "intro":
+        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
+        
+        with st.container():
+            st.markdown("<div class='intro-section'>", unsafe_allow_html=True)
+            st.subheader("College & Career Benefits")
+            for benefit in slide["content"]["benefits"]:
+                st.markdown(f"✅ {benefit}")
+            st.markdown("</div>", unsafe_allow_html=True)
+        
+        st.markdown("<div class='intro-section'>", unsafe_allow_html=True)
+        st.subheader("Real-World Applications")
+        st.info(slide["content"]["applications"])
+        st.markdown("</div>", unsafe_allow_html=True)
+        
+        # YouTube search section
+        display_youtube_search("AP Statistics", YOUTUBE_SEARCH_KEYWORDS["general"])
+        
+        # Display resources
+        st.markdown("---")
+        st.markdown("### 🔍 Explore Real Statistics in Action")
+        st.markdown("**Search for these terms on YouTube to see statistics in action (click to open):**")
+        
+        col1, col2, col3 = st.columns(3)
+        keywords = YOUTUBE_SEARCH_KEYWORDS["general"]
+        
+        with col1:
+            for keyword in keywords[:2]:
+                search_url = create_youtube_search_url(keyword)
+                st.markdown(f"[🔍 {keyword}]({search_url})")
+        
+        with col2:
+            for keyword in keywords[2:4]:
+                search_url = create_youtube_search_url(keyword)
+                st.markdown(f"[🔍 {keyword}]({search_url})")
+        
+        with col3:
+            for keyword in keywords[4:]:
+                search_url = create_youtube_search_url(keyword)
+                st.markdown(f"[🔍 {keyword}]({search_url})")
+    
+    elif slide["type"] == "career":
+        career_name = slide["title"].replace("🏥 ", "").replace("📈 ", "").replace("⚕️ ", "").replace("💉 ", "").replace("🔒 ", "").replace("🧪 ", "").replace("🩺 ", "").replace("⚡ ", "").replace("🏗️ ", "").replace("👶 ", "").replace("💻 ", "").replace("🔬 ", "")
+        
+        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
+        
+        with st.container():
+            st.markdown("<div class='slide-card'>", unsafe_allow_html=True)
+            st.markdown(f"<h2 class='career-title'>{slide['content']['description']}</h2>", unsafe_allow_html=True)
+            
+            for example in slide["content"]["examples"]:
+                with st.container():
+                    st.markdown("<div class='example-box'>", unsafe_allow_html=True)
+                    st.markdown(f"**{example['title']}**")
+                    st.markdown(example["content"], unsafe_allow_html=True)
+                    st.markdown("</div>", unsafe_allow_html=True)
+            
+            st.markdown("</div>", unsafe_allow_html=True)
+        
+        # Display YouTube search for this career
+        display_career_resources(slide["content"]["resources"], career_name)
+        
+        # Add College Schedule Section
+        if career_name in NJ_COLLEGE_SCHEDULES:
+            with st.expander("🎓 Sample College Schedule at a New Jersey State School", expanded=False):
+                schedule_data = NJ_COLLEGE_SCHEDULES[career_name]
+                
+                st.markdown(f"""
+                <div class='schedule-box'>
+                    <h3>🏫 {schedule_data['school']}</h3>
+                    <p><strong>Major:</strong> {schedule_data['major']}</p>
+                    <p><strong>Note:</strong> {schedule_data['stats_note']}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                st.markdown("### 📅 4-Year Course Schedule")
+                
+                for year, courses in schedule_data['schedule'].items():
+                    st.markdown(f"<div class='schedule-year'><strong>{year}:</strong>", unsafe_allow_html=True)
+                    for course in courses:
+                        if "Statistics" in course or "(AP Credit Accepted!)" in course:
+                            st.markdown(f"✅ **{course}**")
+                        else:
+                            st.markdown(f"• {course}")
+                    st.markdown("</div>", unsafe_allow_html=True)
+    
+    elif slide["type"] == "closing":
+        st.markdown(f"<h1 class='main-header'>{slide['title']}</h1>", unsafe_allow_html=True)
+        
+        # YouTube search section for career exploration
+        st.markdown("### 🔍 Explore More Careers")
+        st.markdown("**Click these links to search YouTube and learn about statistics in different fields:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("**Healthcare Fields:**")
+            for career in ["NICU Nurse", "Pediatric Surgeon", "Registered Nurse", "Dermatology Physician Assistant", "Pediatrician"]:
+                keywords = YOUTUBE_SEARCH_KEYWORDS.get(career, [f"statistics in {career}"])
+                if keywords:
+                    search_url = create_youtube_search_url(keywords[0])
+                    st.markdown(f"[🔍 {career}]({search_url})")
+        
+        with col2:
+            st.markdown("**Technology & Engineering:**")
+            for career in ["Cybersecurity Professional", "Software Developer", "Electrical Engineer", "Civil Engineer", "Physicist / Nanotechnologist"]:
+                keywords = YOUTUBE_SEARCH_KEYWORDS.get(career, [f"statistics in {career}"])
+                if keywords:
+                    search_url = create_youtube_search_url(keywords[0])
+                    st.markdown(f"[🔍 {career}]({search_url})")
+        
+        # Add decorative gradient background
+        st.markdown("""
+        <div style='height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 
