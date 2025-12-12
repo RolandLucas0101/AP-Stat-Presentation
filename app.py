@@ -1,3 +1,4 @@
+
 import streamlit as st
 import base64
 from io import BytesIO
@@ -213,6 +214,27 @@ st.markdown("""
     .clickable-link:hover {
         background: #cc0000;
         color: white;
+    }
+    
+    .teacher-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+        border: 2px solid #fff;
+        color: white;
+        text-align: center;
+    }
+    
+    .teacher-banner h3 {
+        color: white;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .teacher-banner p {
+        color: #e0e0e0;
+        margin: 0.25rem 0;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -924,6 +946,15 @@ def create_flyer_html():
             li {
                 margin: 8px 0;
             }
+            .teacher-credit {
+                text-align: center;
+                font-style: italic;
+                font-size: 10pt;
+                color: #666;
+                margin-top: 5px;
+                padding: 5px;
+                border-top: 1px solid #ccc;
+            }
         }
     </style>
 </head>
@@ -936,6 +967,10 @@ def create_flyer_html():
         <h2>Your Gateway to Career Success</h2>
         <p style="font-weight: bold; font-size: 12pt;">Why Juniors Should Take AP Stats Senior Year</p>
         <p style="font-size: 10pt; color: #666;">''' + today + '''</p>
+        <div class="teacher-credit">
+            Compiled by Dr. Roland Lucas<br>
+            AP Statistics Teacher at Newark Tech
+        </div>
     </div>
     
     <div class="section">
@@ -998,6 +1033,10 @@ def create_flyer_html():
 <div class="page page-break">
     <div style="text-align: center; margin-bottom: 20px;">
         <h1 style="color: #764ba2;">AP Statistics Career Connections</h1>
+        <div class="teacher-credit">
+            AP Statistics: The Data Skills Every Career Demands<br>
+            Dr. Roland Lucas, Newark Tech
+        </div>
     </div>
     
     <div class="section">
@@ -1083,9 +1122,10 @@ def create_flyer_html():
         <p style="font-style: italic; margin-top: 10px;">
         "In God we trust, all others must bring data." - W. Edwards Deming
         </p>
-        <p style="font-size: 9pt; margin-top: 20px; color: #666;">
-        Print and share this flyer! | Interactive version available online
-        </p>
+        <div class="teacher-credit">
+            <strong>AP Statistics: The Data Skills Every Career Demands</strong><br>
+            Compiled by Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
+        </div>
     </div>
 </div>
 
@@ -1216,6 +1256,15 @@ def create_complete_presentation_html():
             li {
                 margin: 8px 0;
             }
+            .teacher-credit {
+                font-style: italic;
+                color: #666;
+                text-align: center;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #ccc;
+                font-size: 11pt;
+            }
         }
     </style>
 </head>
@@ -1223,8 +1272,12 @@ def create_complete_presentation_html():
 
 <div class="print-header">
     <h1>AP Statistics Career Presentation</h1>
-    <p><strong>Complete Printable Version</strong></p>
+    <p><strong>AP Statistics: The Data Skills Every Career Demands</strong></p>
     <small>Generated on ''' + today + ''' | All content expanded for printing</small>
+    <div class="teacher-credit">
+        Compiled by Dr. Roland Lucas<br>
+        AP Statistics Teacher at Newark Tech
+    </div>
 </div>'''
     
     # Add ALL slides to the printable version
@@ -1237,6 +1290,10 @@ def create_complete_presentation_html():
             <h2 style="text-align: center; color: #764ba2;">{slide["subtitle"]}</h2>
             <div style="text-align: center; margin-top: 100px; font-size: 16pt;">
                 {slide["content"]}
+            </div>
+            <div class="teacher-credit">
+                AP Statistics: The Data Skills Every Career Demands<br>
+                Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
             </div>
             '''
             
@@ -1343,6 +1400,11 @@ def create_complete_presentation_html():
                     • Khan Academy: Free AP Statistics course<br>
                     • College Board: Official AP Statistics resources
                 </p>
+            </div>
+            
+            <div class="teacher-credit">
+                <strong>AP Statistics: The Data Skills Every Career Demands</strong><br>
+                Compiled by Dr. Roland Lucas, AP Statistics Teacher at Newark Tech
             </div>
             '''
         
@@ -1493,13 +1555,12 @@ def main():
         
         return
     
-    # YOUTUBE SEARCH BANNER
+    # TEACHER BANNER WITH NEW HEADER
     st.markdown("""
-    <div class="search-container">
-        <h3>🎬 Find Videos That Work!</h3>
-        <p><strong>Problem:</strong> YouTube links often break or get removed.</p>
-        <p><strong>Solution:</strong> Use our search tool below to find current, working videos for each career!</p>
-        <p><strong>How to use:</strong> Click any red button below to open YouTube in a new tab with search results!</p>
+    <div class="teacher-banner">
+        <h3>AP Statistics: The Data Skills Every Career Demands</h3>
+        <p>Compiled by Dr. Roland Lucas</p>
+        <p>AP Statistics Teacher at Newark Tech</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1685,12 +1746,12 @@ def main():
         </div>
         """, unsafe_allow_html=True)
     
-    # Footer with YouTube search tip
+    # Footer with teacher credit
     st.markdown("---")
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.caption("💡 **Tip:** Click any search link to open YouTube in a new tab")
-        st.caption("🎬 **Guarantee:** The videos in the sidebar always work!")
+        st.caption("🎓 **AP Statistics: The Data Skills Every Career Demands** - Dr. Roland Lucas, Newark Tech")
 
 if __name__ == "__main__":
     main()
