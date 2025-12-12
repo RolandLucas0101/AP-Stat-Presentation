@@ -949,7 +949,7 @@ def create_flyer_html():
             .teacher-credit {
                 text-align: center;
                 font-style: italic;
-                font-size: 10pt;
+                font-size: 12pt;
                 color: #666;
                 margin-top: 5px;
                 padding: 5px;
