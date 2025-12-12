@@ -94,6 +94,24 @@ st.markdown("""
         text-decoration: underline;
     }
     
+    .case-study-link {
+        background: #fff3e0;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        border-left: 4px solid #ff9800;
+    }
+    
+    .case-study-link a {
+        color: #e65100;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .case-study-link a:hover {
+        text-decoration: underline;
+    }
+    
     .case-study {
         background: #f8f9fa;
         padding: 1rem;
@@ -264,6 +282,154 @@ GUARANTEED_VIDEOS = {
         "url": "https://www.youtube.com/watch?v=kyjlxsLW1Is",
         "description": "Careers in statistics"
     }
+}
+
+# Career Case Studies Database (NEW ADDITION)
+CAREER_CASE_STUDIES = {
+    "NICU Nurse": [
+        {
+            "title": "Statistical Analysis of Neonatal Sepsis Risk Factors",
+            "url": "https://publications.aap.org/pediatrics/article/146/1/e20193711/76947/Neonatal-Sepsis-Ahead-of-Time",
+            "description": "Case study showing statistical modeling of risk factors for neonatal infections"
+        },
+        {
+            "title": "Statistical Process Control in NICU Quality Improvement",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869186/",
+            "description": "Using control charts to reduce central line infections in NICUs"
+        }
+    ],
+    "Marketing Professional": [
+        {
+            "title": "A/B Testing Case Study: Netflix Recommendation Algorithm",
+            "url": "https://netflixtechblog.com/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15",
+            "description": "Statistical testing of recommendation algorithms to improve user engagement"
+        },
+        {
+            "title": "Statistical Analysis of Customer Lifetime Value",
+            "url": "https://hbr.org/2021/03/how-to-calculate-customer-lifetime-value",
+            "description": "Using regression analysis to predict and optimize customer value"
+        }
+    ],
+    "Pediatric Surgeon": [
+        {
+            "title": "Statistical Analysis of Surgical Outcomes in Pediatric Cardiology",
+            "url": "https://www.jtcvstech.org/article/S2666-2736(20)30132-9/fulltext",
+            "description": "Case study on statistical models predicting surgical complication risks"
+        },
+        {
+            "title": "Evidence-Based Surgery: Statistical Review of Minimally Invasive Techniques",
+            "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/2756414",
+            "description": "Meta-analysis comparing traditional vs. minimally invasive pediatric surgery"
+        }
+    ],
+    "Registered Nurse": [
+        {
+            "title": "Statistical Control Charts for Hospital-Acquired Infections",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4043407/",
+            "description": "Using statistical process control to reduce infection rates"
+        },
+        {
+            "title": "Data-Driven Nursing: Statistical Analysis of Fall Prevention Programs",
+            "url": "https://journals.lww.com/nursing/Fulltext/2019/05000/Using_data_to_reduce_patient_falls.12.aspx",
+            "description": "Statistical evaluation of patient fall prevention interventions"
+        }
+    ],
+    "Cybersecurity Professional": [
+        {
+            "title": "Statistical Anomaly Detection for Network Security",
+            "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/liu-zhuo",
+            "description": "Case study on statistical methods for detecting cyber attacks"
+        },
+        {
+            "title": "Probability Models for Cybersecurity Risk Assessment",
+            "url": "https://www.sans.org/white-papers/37075/",
+            "description": "Statistical approaches to quantifying and managing security risks"
+        }
+    ],
+    "Cosmetic Scientist": [
+        {
+            "title": "Statistical Design of Experiments in Cosmetic Formulation",
+            "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ics.12456",
+            "description": "Case study on optimizing cosmetic products using statistical methods"
+        },
+        {
+            "title": "Clinical Trial Statistics for Cosmetic Product Testing",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921764/",
+            "description": "Statistical analysis methods for cosmetic efficacy studies"
+        }
+    ],
+    "Dermatology Physician Assistant": [
+        {
+            "title": "Statistical Analysis of Skin Cancer Diagnostic Accuracy",
+            "url": "https://jamanetwork.com/journals/jamadermatology/fullarticle/2762448",
+            "description": "Statistical evaluation of diagnostic tests for melanoma detection"
+        },
+        {
+            "title": "Clinical Trial Statistics for Dermatological Treatments",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3047950/",
+            "description": "Statistical methods in dermatology treatment efficacy studies"
+        }
+    ],
+    "Electrical Engineer": [
+        {
+            "title": "Statistical Quality Control in Semiconductor Manufacturing",
+            "url": "https://ieeexplore.ieee.org/document/8991809",
+            "description": "Case study on statistical process control in chip manufacturing"
+        },
+        {
+            "title": "Reliability Engineering: Statistical Failure Analysis",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0951832018305500",
+            "description": "Statistical methods for predicting electronic component failures"
+        }
+    ],
+    "Civil Engineer": [
+        {
+            "title": "Statistical Analysis of Structural Load Testing",
+            "url": "https://ascelibrary.org/doi/10.1061/%28ASCE%29ST.1943-541X.0002019",
+            "description": "Case study on statistical methods in bridge safety testing"
+        },
+        {
+            "title": "Geotechnical Statistics for Foundation Design",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0266352X17301832",
+            "description": "Statistical analysis of soil properties for construction projects"
+        }
+    ],
+    "Pediatrician": [
+        {
+            "title": "Statistical Analysis of Childhood Vaccination Effectiveness",
+            "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1912514",
+            "description": "Large-scale statistical study of pediatric vaccine efficacy"
+        },
+        {
+            "title": "Growth Chart Statistics and Child Development",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4235455/",
+            "description": "Statistical methods behind pediatric growth standards"
+        }
+    ],
+    "Software Developer": [
+        {
+            "title": "A/B Testing at Scale: Facebook's Experimentation Platform",
+            "url": "https://engineering.fb.com/2020/05/08/production-engineering/ab-testing/",
+            "description": "Statistical testing methodology for software feature development"
+        },
+        {
+            "title": "Statistical Analysis of Software Performance Metrics",
+            "url": "https://dl.acm.org/doi/10.1145/3180155.3180180",
+            "description": "Case study on using statistics for performance optimization"
+        }
+    ],
+    "Physicist / Nanotechnologist": [
+        {
+            "title": "Statistical Analysis of Experimental Physics Data",
+            "url": "https://www.nature.com/articles/s41567-020-0834-8",
+            "description": "Statistical methods in particle physics experimentation"
+        },
+        {
+            "title": "Nanomaterial Characterization Statistics",
+            "url": "https://pubs.acs.org/doi/10.1021/acsnano.0c08903",
+            "description": "Statistical analysis techniques for nanotechnology research"
+        }
+    ]
 }
 
 # YouTube Search Keywords for each career
@@ -811,7 +977,22 @@ def display_career_resources(career_key, career_name):
     """Display resources for a specific career"""
     st.markdown("### 📚 Learning Resources")
     
-    # Display guaranteed working videos first
+    # Display Case Studies Section (NEW ADDITION)
+    if career_name in CAREER_CASE_STUDIES and CAREER_CASE_STUDIES[career_name]:
+        st.markdown("#### 📄 Real-World Case Studies")
+        st.markdown(f"**See how statistics are actually used in {career_name}: (click to open)**")
+        
+        for study in CAREER_CASE_STUDIES[career_name]:
+            st.markdown(f"""
+            <div class='case-study-link'>
+                📖 <a href='{study['url']}' target='_blank'>{study['title']}</a>
+                <br><small>{study['description']}</small>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+    
+    # Display YouTube search section
     display_youtube_search(career_name)
     
     # Additional resources section
@@ -1358,6 +1539,22 @@ def create_complete_presentation_html():
                 </div>
                 '''
             
+            # Add case studies to printable version
+            if career_name in CAREER_CASE_STUDIES and CAREER_CASE_STUDIES[career_name]:
+                presentation_html += f'''
+                <div class="resources">
+                    <h4>📄 Case Studies in {career_name}:</h4>
+                    <ul>
+                '''
+                
+                for study in CAREER_CASE_STUDIES[career_name]:
+                    presentation_html += f'<li><a href="{study["url"]}">{study["title"]}</a>: {study["description"]}</li>\n'
+                
+                presentation_html += '''
+                    </ul>
+                </div>
+                '''
+            
             # Add YouTube search tips
             presentation_html += f'''
             <div class="resources">
@@ -1489,6 +1686,17 @@ def main():
             for idx, keyword in enumerate(keywords[:3]):
                 search_url = create_youtube_search_url(keyword)
                 st.markdown(f"[🔎 {keyword}]({search_url})")
+        
+        # CASE STUDY LINKS IN SIDEBAR
+        st.markdown("---")
+        st.subheader("📄 Case Studies")
+        
+        if slide["type"] == "career":
+            career_name = slide["title"].replace("🏥 ", "").replace("📈 ", "").replace("⚕️ ", "").replace("💉 ", "").replace("🔒 ", "").replace("🧪 ", "").replace("🩺 ", "").replace("⚡ ", "").replace("🏗️ ", "").replace("👶 ", "").replace("💻 ", "").replace("🔬 ", "")
+            
+            if career_name in CAREER_CASE_STUDIES and CAREER_CASE_STUDIES[career_name]:
+                for study in CAREER_CASE_STUDIES[career_name][:2]:  # Show 2 in sidebar
+                    st.markdown(f"[📖 {study['title'][:40]}...]({study['url']})")
         
         # GUARANTEED WORKING VIDEOS
         st.markdown("---")
@@ -1667,7 +1875,7 @@ def main():
             
             st.markdown("</div>", unsafe_allow_html=True)
         
-        # Display YouTube search for this career
+        # Display YouTube search for this career (now includes case studies first)
         display_career_resources(slide["content"]["resources"], career_name)
         
         # Add College Schedule Section
